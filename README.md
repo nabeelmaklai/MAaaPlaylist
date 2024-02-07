@@ -24,11 +24,11 @@
 * Genres and artists are stored as arrays of strings, allowing a song to be associated with multiple genres and artists if necessary.
 * The cover attribute stores a URL or file path pointing to the cover art for the song.
 
-> The wireframe of the conceptualized site will have the following pages.
+> The wireframe of the conceptualized site are detailed below. The landing page will be a search bar with a navigation bar on the top which will have the Google Oauth login link and a link to display all the playlists. The specific pages of the site is detailed below.
 
 The landing page without user authentication 
 
-![Alt text](images/Blank-diagram.png)
+![Alt text](images/wireframe/1-Home Page-not-logged-in.png)
 
 The 
 
