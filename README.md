@@ -8,7 +8,7 @@
 
 > The site will be developed using the Express JS framework. A dedicated API will be used to fetch songs and the details of these songs to be added to the user's playist. The site will be developed and designed using the the conceptualized ERD below. The ERD will have three entities (Playlist, Song, and User) connected with two relationships (Playlist - Song and User - Playlist).
 
-![Image]( Blank diagram.png)
+![Image](Blank diagram.png)
 
 **Users**
 * The users will be able to create accounts on the platform, which will require providing a name, email, and possibly linking their Google account (googleId)
