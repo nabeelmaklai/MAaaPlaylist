@@ -28,7 +28,7 @@
 
 The landing page without user authentication 
 
-![Alt text](images/wireframe/1-Home Page-not-logged-in.png)
+![Alt text](images/wireframe/1-Home-Page-not-logged-in.png)
 
 The 
 
