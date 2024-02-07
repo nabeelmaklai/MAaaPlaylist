@@ -26,11 +26,49 @@
 
 > The wireframe of the conceptualized site are detailed below. The landing page will be a search bar with a navigation bar on the top which will have the Google Oauth login link and a link to display all the playlists. The specific pages of the site is detailed below.
 
-The landing page without user authentication 
+**The landing page without user authentication**
 
 ![Alt text](images/wireframe/1-Home-Page-not-logged-in.png)
 
-The 
+The landing page after the user logs in will have a search bar that users can use to browse the available songs.
+
+**The landing page with user authentication**
+
+![Alt text](images/wireframe/2-Home-Page-logged-in.png)
+
+The landing page after the user logs in will have a search bar that users can use to browse the available songs.
+
+**The search results**
+![Alt text](images/wireframe/3-Search-Results.png)
+The search results will be displayed as horizontally across the page. Users will be able to see the songs’s name as well as its cover 
+
+
+
+**Song details**
+![Alt text](images/wireframe/4-Song-Details.png)
+
+When users select a certain song, a new page will open. The page will display additional details of the song. The users will then have the opportunity and the option to add the song to a playlist 
+
+**All playlists**
+![Alt text](images/wireframe/5-Playlists.png)
+
+The users will be able to display all their playlists. The playlists will contain the name of the playlist as well as the option to display the details of the playlist 
+
+**Playlist details**
+
+![Alt text](images/wireframe/6-Playlist-Details.png)
+
+The playlist details will show only the selected playlist and give the user an opportunity to edit and delete the playlist
+
+**Edit playlist details**
+![Alt text](images/wireframe/7-Edit-Playlist-Details.png)
+
+The playlist details such as the name and the description can be edited. 
+
+
+
+
+
 
 
 
