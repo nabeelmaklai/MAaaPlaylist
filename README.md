@@ -24,6 +24,14 @@
 * Genres and artists are stored as arrays of strings, allowing a song to be associated with multiple genres and artists if necessary.
 * The cover attribute stores a URL or file path pointing to the cover art for the song.
 
+> The wireframe of the conceptualized site will have the following pages.
+
+The landing page without user authentication 
+
+![Alt text](images/Blank-diagram.png)
+
+The 
+
 
 
 ## :computer: Technologies Used
