@@ -68,8 +68,8 @@ When the user selects a playlist to edit its details, the playlist details page 
 ## collaborators
 
 The building of the site will be a team effort. The other two team members are:
-[Mariam](https://github.com/MariamBaloch)
-[Abdul Rehman](https://github.com/MariamBaloch)
+* [Mariam](https://github.com/MariamBaloch)
+* [Abdul Rehman](https://github.com/aboodabdo347)
 
 The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
 
