@@ -70,7 +70,7 @@ When the user selects a playlist to edit its details, the playlist details page 
 The building of the site will be a team effort. The team was composed of:
 * [Mariam](https://github.com/MariamBaloch)
 * [AbdulRahman](https://github.com/aboodabdo347)
-* [Abdul Rehman](https://github.com/nabeelmaklai)
+* [Nabeel](https://github.com/nabeelmaklai)
 
 The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
 
