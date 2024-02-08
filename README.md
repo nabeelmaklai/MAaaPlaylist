@@ -1,4 +1,4 @@
-# MAa-Playlist
+# MAaaPlaylist
 
 ## About the site
 
