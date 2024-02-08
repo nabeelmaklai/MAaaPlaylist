@@ -1,4 +1,4 @@
-# awsome-playlist-app-5000
+# MAa-Playlist
 
 ## About the site
 
