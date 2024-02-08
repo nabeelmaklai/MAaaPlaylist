@@ -65,6 +65,15 @@ The playlist details will show only the selected playlist and give the user an o
 
 When the user selects a playlist to edit its details, the playlist details page will give the user the option to update the playlist name and the description. 
 
+## collaborators
+
+The building of the site will be a team effort. The other two team members are:
+[Mariam](https://github.com/MariamBaloch)
+[Abdul Rehman](https://github.com/MariamBaloch)
+
+The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
+
+
 
 
 
