@@ -18,5 +18,6 @@
     "morgan": "~1.9.1",
     "passport": "^0.7.0",
     "passport-google-oauth": "^2.0.0"
+
   }
 }
