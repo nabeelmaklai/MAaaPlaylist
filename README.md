@@ -12,12 +12,12 @@
 
 **Users**
 
-- The users will be able to create accounts on the platform, which will require providing a name, email, and possibly linking their Google account (googleId)
+- The users will be able to log in on the platform by linking their Google account.
 
 **Playlists**
 
 - The site users can create multiple playlists to organize their favorite songs
-- Users Each playlist has a name and a description to give context to its content.
+- Each playlist has a name and a description to give context to its content.
 - Users can add songs to their playlists. The songs attribute in the Playlist entity stores references (ObjectIds) to the songs included in the playlist.
 
 **Songs**
@@ -71,10 +71,12 @@ When the user selects a playlist to edit its details, the playlist details page 
 
 ## Team
 
-The building of the site will be a team effort. The other two team members are:
+The building of the site will be a team effort. The team was composed of:
 
 - [Mariam](https://github.com/MariamBaloch)
-- [Abdul Rehman](https://github.com/aboodabdo347)
+- [AbdulRahman](https://github.com/aboodabdo347)
+
+* [Nabeel](https://github.com/nabeelmaklai)
 
 The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
 
