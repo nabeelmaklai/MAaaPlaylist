@@ -1,1 +1,6 @@
-<p>Aaaaaaaaaa</p>
+<%- include('../partials/header') %>
+<% songs.forEach(song => { %>
+  <h3><%= song.name %></h3>
+  <img id="cover" src="<%= song.cover %>">
+<% }); %>
+<%- include('../partials/footer') %>
