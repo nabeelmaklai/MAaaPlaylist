@@ -1,6 +1,28 @@
 <%- include('../partials/header') %>
-<% songs.forEach(song => { %>
-  <h3><%= song.name %></h3>
-  <img id="cover" src="<%= song.cover %>">
-<% }); %>
+<div class=""Song-details> 
+ <img src="<%= songdetails.cover %>">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Genre</th>
+      <th>Artist</th>
+      <th>Release Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%=songdetails.name %></td>
+      <br>
+      <td><%= songdetails.genre %></td>
+      <br>
+      <td><%= songdetails.artist %></td>
+      <br>
+      <td><%= songdetails.releaseYear %></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <%- include('../partials/footer') %>
+
+
