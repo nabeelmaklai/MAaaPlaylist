@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/songs', songsRouter)
+app.use('/:id', songsRouter)
 app.use('/users', usersRouter)
 
 // catch 404 and forward to error handler
