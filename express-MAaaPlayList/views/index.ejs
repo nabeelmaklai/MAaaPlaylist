@@ -1,11 +1,23 @@
-<%- include('./partials/header') %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <br><br><h2>Search For a Song</h2>
-    <form id="add-performer-form" action="/songs/songdetails" method="POST">
-      <label>Name:</label>
-      <input type="text" name="name">
-      <input type="submit" value="Search Song">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/home-page.css'/>
+  </head>
+  <body>
+    <nav>
+       <a class="nav-items" href="#">Your Playlists</a>
+      <a class="nav-items" href="#">Log In</a>
+    </nav>
+    <div id="logo">
+      <img id="logo-img" src="https://i.imgur.com/XLSdDc1.png">
+    </div>
+<div id="search-song">
+    <h2>Search For Songs</h2>
+    <form id="search-song-form" action="/songs/songdetails" method="POST">
+      <input id="search-song-input" type="text" name="name" placeholder="search...">
+      <br><input id="search-song-btn" type="submit" value="Search Song">
     </form>
     <%- include('./partials/footer') %>
+</div>

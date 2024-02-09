@@ -19,7 +19,7 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    playlists: [{type: Schema.Types.ObjectId, ref: 'Playlist' }]
+    playlists: [{ type: Schema.Types.ObjectId, ref: 'Playlist' }]
   },
   {
     timestamps: true
