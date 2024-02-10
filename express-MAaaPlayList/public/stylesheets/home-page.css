@@ -116,3 +116,6 @@ nav {
   margin-top: 3%;
   width: 140px;
 }
+#select-text {
+  user-select: none;
+}

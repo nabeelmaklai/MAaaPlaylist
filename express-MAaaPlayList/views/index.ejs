@@ -7,14 +7,14 @@
   </head>
   <body>
     <nav>
-       <a class="nav-items" href="#">Your Playlists</a>
-      <a class="nav-items" href="#">Log In</a>
+       <a class="nav-items" id="select-text" href="#">Your Playlists</a>
+      <a class="nav-items" id="select-text" href="#">Log In</a>
     </nav>
     <div id="logo">
-      <img id="logo-img" src="https://i.imgur.com/XLSdDc1.png">
+      <img id="logo-img" id="select-text" src="https://i.imgur.com/XLSdDc1.png">
     </div>
 <div id="search-song">
-    <h2>Search For Songs</h2>
+    <h2 id="select-text">Search For Songs</h2>
     <form id="search-song-form" action="/songs/songresults" method="POST">
       <input id="search-song-input" type="text" name="name" placeholder="search songs...">
       <br><input id="search-song-btn" type="submit" value="Search">
