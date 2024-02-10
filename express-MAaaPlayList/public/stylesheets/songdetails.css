@@ -1,9 +1,8 @@
 body {
   background-color: black;
   color: white;
-  background-image: url(https://i.imgur.com/m0Bm985.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #010a01;
+  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
 }
 .song-details-container {
   display: flex;
@@ -18,8 +17,8 @@ body {
   height: 350px;
   border: 0.2rem solid #fff;
   border-radius: 2rem;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe13ac,
-    0 0 0.8rem #fe13db, 0 0 2.8rem #f213fe, inset 0 0 1.3rem #fe13e6;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
 }
 
 #song-name {
@@ -37,7 +36,7 @@ body {
   font-size: 18px;
 }
 #song-image {
-  width: 600px;
-  height: 600px;
+  width: 28vw;
+  height: 62vh;
   border: 3px white solid;
 }
