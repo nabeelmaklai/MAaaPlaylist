@@ -1,8 +1,24 @@
 <%- include('../partials/header') %>
-<% songs.forEach(song => { %>
-  <h3><%= song.name %></h3>
-  <img id="cover" src="<%= song.cover %>">
-  <br>
-  <a href="/songs/<%=song._id%>">Details</a> 
-<% }); %>
+<link rel='stylesheet' href='/stylesheets/searchresults.css' />
+
+<% if(searchQuery !== ""){%>
+  <h1>Search results for "<%= searchQuery %>"</h1>
+<%} else {%>
+  <h1>All Songs</h1>
+  <%}%>
+
+
+<div class="songs-container">
+
+    <% songs.forEach(song => { %>
+      <div id="songs">
+      <h3><%= song.name %></h3>
+      <img id="cover" src="<%= song.cover %>">
+      <br>
+      <a href="/songs/<%=song._id%>">Details</a> 
+    </div>
+    <% }); %>
+
+</div>
+
 <%- include('../partials/footer') %>

@@ -8,7 +8,11 @@ const show = async (req, res) => {
     if (songs.length === 0) {
       res.send('No songs found')
     } else {
-      res.render('songs/songresults', { title: 'Results', songs })
+      res.render('songs/songresults', {
+        title: 'Results',
+        songs,
+        searchQuery: req.body.name
+      })
     }
   } catch (error) {
     console.log(error)
