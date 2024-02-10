@@ -4,25 +4,8 @@
 body {
   padding: 0;
   background-color: black;
-  /* background pattern taken from https://projects.verou.me/css3patterns/#starry-night  */
-  background-image: radial-gradient(
-      white,
-      rgba(255, 255, 255, 0.2) 2px,
-      transparent 40px
-    ),
-    radial-gradient(
-      rgb(239, 11, 11),
-      rgba(164, 0, 0, 0.15) 1px,
-      transparent 30px
-    ),
-    radial-gradient(rgb(246, 5, 5), rgba(146, 3, 3, 0.1) 2px, transparent 40px),
-    radial-gradient(
-      rgba(248, 248, 248, 0.4),
-      rgba(188, 4, 4, 0.1) 2px,
-      transparent 30px
-    );
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  background-color: #010a01;
+  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
 }
 nav {
   flex-direction: row;
@@ -33,20 +16,20 @@ nav {
   margin-bottom: 20px;
 }
 #search-song {
-  position: absolute;
-  top: 50%;
-  left: 51%;
-  transform: translate(-50%, -50%);
+  max-width: max-content;
+  margin: 0 auto;
+  text-align: center;
 }
+
 /* neon effect take from https://css-tricks.com/how-to-create-neon-text-with-css/ */
 #search-song h2 {
   color: rgb(255, 255, 255);
   font-family: 'Sacramento', cursive;
-  font-size: 120px;
+  font-size: 12vh;
   margin-bottom: 50px;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fe1313,
     0 0 82px #fe1313;
-  animation: pulsate 2s infinite alternate;
+  animation: pulsate 1.7s infinite alternate;
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   padding: 0.4em;
@@ -63,13 +46,20 @@ nav {
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #fe1313,
       0 0 45px #fe1313, 0 0 55px #fe1313;
   }
+  100% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313;
+  }
+  0% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+      0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313,
+      0 0 3rem #fe1313, inset 0 0 3.5rem #fe1313;
+  }
 }
 
 #search-song-input {
-  margin-top: 9px;
-  width: 500px;
-  height: 35px;
-  margin-left: 23%;
+  margin: 0 15%;
+  width: 70%;
+  height: 4vh;
   border-radius: 20px;
   text-align: center;
   font-size: 18px;
@@ -77,18 +67,13 @@ nav {
 }
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
-  margin-top: 40px;
-  margin-left: 44%;
+  width: max-content;
+  margin: 1.5vh auto;
   --red: #ce0d0d;
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
+  font-size: 1.5vh;
+  padding: 0.5em 2em;
   border-radius: 50px;
-  overflow: hidden;
   transition: all 0.3s;
-  line-height: 1.4em;
   border: 2px solid white;
   background: linear-gradient(
     to right,
@@ -114,7 +99,8 @@ nav {
 }
 #logo-img {
   margin-top: 3%;
-  width: 140px;
+  width: 15vh;
+  filter: drop-shadow(10px 10px 3px rgba(199, 36, 15, 0.938));
 }
 #select-text {
   user-select: none;
