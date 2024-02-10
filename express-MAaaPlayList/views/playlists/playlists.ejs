@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/searchresults.css' />
+
+<div class="songs-container">
+  <form id="search-song-form"  action="/new" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Description:</label>
+    <input type="text" name="description">
+    <br>
+    <input  type="submit" value="Add Playlist">
+  </form>
+<br>
+
+
+
+<% allPlayLists.forEach(playlist => { %>
+  <div class="songs-container">
+  <h3><%= playlist.name %></h3>
+
+    <h3><%= playlist.description %></h3>
+  <br>
+</div>
+<% }); %>
+</div>
+<%- include('../partials/footer') %>
+
