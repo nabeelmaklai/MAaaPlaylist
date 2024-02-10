@@ -1,27 +1,18 @@
 <%- include('../partials/header') %>
-<div class=""Song-details> 
- <img src="<%= songdetails.cover %>">
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Genre</th>
-      <th>Artist</th>
-      <th>Release Year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%=songdetails.name %></td>
-      <br>
-      <td><%= songdetails.genre %></td>
-      <br>
-      <td><%= songdetails.artist %></td>
-      <br>
-      <td><%= songdetails.releaseYear %></td>
-    </tr>
-  </tbody>
-</table>
+<link rel='stylesheet' href='/stylesheets/songdetails.css' />
+<div class="song-details-container"> 
+ <img id="song-image" src="<%= songdetails.cover %>">
+ <div id="song">
+  <div id="song-name">
+    <p><%=songdetails.name %></p>
+  </div>
+  <div id="song-details">
+    <p><span class="song-detail-heading">Artist:</span> &nbsp;<%= songdetails.artist %></p>
+    <p><span class="song-detail-heading">Genre:</span> &nbsp;<%= songdetails.genre %></p>
+    <p><span class="song-detail-heading">Release Year:</span>  &nbsp;<%= songdetails.releaseYear %></p>
+  </div>
+</div>
+
 </div>
 <%- include('../partials/footer') %>
 

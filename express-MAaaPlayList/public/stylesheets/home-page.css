@@ -78,7 +78,7 @@ nav {
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
   margin-top: 40px;
-  margin-left: 41%;
+  margin-left: 44%;
   --red: #ce0d0d;
   font-size: 15px;
   padding: 0.7em 2.7em;
@@ -108,31 +108,11 @@ nav {
     0 0 9px 3px rgba(253, 80, 27, 0.2);
 }
 
-#search-song-btn:before {
-  content: '';
-  position: absolute;
-  left: -4em;
-  width: 4em;
-  height: 100%;
-  top: 0;
-  transition: transform 0.4s ease-in-out;
-  background: linear-gradient(
-    to right,
-    transparent 1%,
-    rgba(253, 174, 27, 0.1) 40%,
-    rgba(253, 178, 27, 0.1) 60%,
-    transparent 100%
-  );
-}
-
-#search-song-btn:before {
-  transform: translateX(15em);
-}
 #logo {
   display: flex;
   justify-content: center;
 }
 #logo-img {
-  margin-top: 1%;
-  width: 170px;
+  margin-top: 3%;
+  width: 140px;
 }

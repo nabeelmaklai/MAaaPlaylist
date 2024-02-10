@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  color: white;
+  background-image: url(https://i.imgur.com/m0Bm985.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.song-details-container {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 15%;
+  column-gap: 3%;
+}
+#song {
+  padding-left: 20px;
+  margin-top: 5%;
+  width: 600px;
+  height: 350px;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe13ac,
+    0 0 0.8rem #fe13db, 0 0 2.8rem #f213fe, inset 0 0 1.3rem #fe13e6;
+}
+
+#song-name {
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+#song-details {
+  font-size: 15px;
+}
+.song-detail-heading {
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+}
+#song-image {
+  width: 600px;
+  height: 600px;
+  border: 3px white solid;
+}
