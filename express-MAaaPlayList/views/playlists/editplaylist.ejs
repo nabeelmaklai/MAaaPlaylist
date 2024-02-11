@@ -1,0 +1,7 @@
+<%- include("../partials/header") %>
+<form action="/<%= select._id %>?_method=PUT" method="POST">
+  <input type="text"name="name" value="<%= select.name%>">
+  <input type="text"name="description" value="<%= select.description%>">
+  <button type="submit">Update playlist</button>
+</form>
+<%- include("../partials/footer") %>

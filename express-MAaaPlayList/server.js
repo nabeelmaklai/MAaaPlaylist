@@ -10,10 +10,18 @@ require('dotenv').config()
 require('./config/database')
 require('./config/passport')
 
+const methodOverride = require('method-override')
+var indexRouter = require('./routes/index')
+var usersRouter = require('./routes/users')
+const songsRouter = require('./routes/songs')
+const playlistsRouter = require('./routes/playlists')
+
+
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 const songsRouter = require('./routes/songs')
 const playlistsRouter=require("./routes/playlists")
+
 
 var app = express()
 
@@ -26,6 +34,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(methodOverride('_method'))
+
 app.use(
   session({
     secret: process.env.SECRET,
@@ -44,7 +54,7 @@ app.use('/', indexRouter)
 app.use('/songs', songsRouter)
 app.use('/:id', songsRouter)
 app.use('/users', usersRouter)
-app.use("/", playlistsRouter)
+app.use('/', playlistsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
