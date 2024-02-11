@@ -80,13 +80,23 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    const playlistID = req.body.addToPlaylist
-    const playList = await Playlists.findById(playlistID)
-    playList.songs.push(song)
-    console.log(playList.songs)
-    await playList.save()
+
+    AllSongs.forEach(async (song) => {
+      if (song.apiID === req.params.id) {
+        const playlistID = req.body.addToPlaylist
+        const playList = await Playlists.findById(playlistID)
+        console.log('This is the playlist ID console log', playlistID)
+        if (!playList.songs.some((s) => s._id.equals(song._id))) {
+          console.log('this is the id ' + song.apiID)
+          playList.songs.push(song)
+          console.log('these are songs ' + playList)
+          await playList.save()
+          console.log('Added to playlist')
+        }
+      }
+    })
   } catch (error) {
-    console.log('error in adding song to playlist')
+    console.log('error in adding song to playlist ' + error)
   }
 }
 
