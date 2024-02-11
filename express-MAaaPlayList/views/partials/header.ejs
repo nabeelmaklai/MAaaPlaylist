@@ -7,10 +7,14 @@
   <body>
     <nav>
       <div id="logo">
-        <a href="/"><img id="logo-img" id="select-text"  src="https://i.imgur.com/XLSdDc1.png"></a>
+        <a href="/"><img id="logo-img" src="https://i.imgur.com/XLSdDc1.png"></a>
       </div>
       <div id="nav-links">
-       <a class = "nav-items" href="/playlists">Your Playlists</a>
-      <a class = "nav-items" href="#">Log In</a>
+      <% if (user) { %>
+       <a class = "nav-items" href="#">Your Playlists</a>
+       <a class = "nav-items" href="/logout">Log Out</a>
+       <% } else { %>
+      <a class = "nav-items" href="/auth/google">Log In</a>
+      <% } %>
       </div>
     </nav>
