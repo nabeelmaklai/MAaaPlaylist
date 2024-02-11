@@ -17,7 +17,7 @@
 </div>
 <br><br><h2>Add to playlist</h2>
 <form id="add-playlist-form" method="POST"
-action="/songs/<%= songdetails._id %>addToPlayList">
+action="/songs/<%= songdetails.id %>/addToPlayList">
   <select name="addToPlaylist">
     <% playlist.forEach((playlist) => { %>
       <option value="<%= playlist._id %>"><%= playlist.name %></option> 

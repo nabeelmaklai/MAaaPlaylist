@@ -1,6 +1,7 @@
 const Playlists = require('../models/playlist')
 const Song = require('../models/song')
-
+const API_TRACK_URL = 'https://api.deezer.com/track/'
+const axios = require('axios')
 
 const create = (req, res) => {
   // res.render('../views/playlists/playlists', { title: 'playlists' })
@@ -58,7 +59,27 @@ const updatePlaylist = async (req, res) => {
 
 const addToPlaylist = async (req, res) => {
   try {
-    const song = await Song.findById(req.params.id)
+    const songdetails = await axios.get(API_TRACK_URL + req.params.id)
+    const songToAdd = {
+      apiID: songdetails.data.id,
+      title: songdetails.data.title,
+      duration: songdetails.data.duration,
+      artist: songdetails.data.artist.name,
+      releaseDate: songdetails.data.release_date,
+      cover: songdetails.data.album.cover_xl,
+      songPreview: songdetails.data.preview,
+      explicitLyric: songdetails.data.explicit_lyrics
+    }
+    const AllSongs = await Song.find({})
+    let songExists = false
+    AllSongs.forEach(async (song) => {
+      if (song.apiID === req.params.id) {
+        songExists = true
+      }
+    })
+    if (songExists === false) {
+      await Song.create(songToAdd)
+    }
     const playlistID = req.body.addToPlaylist
     const playList = await Playlists.findById(playlistID)
     playList.songs.push(song)
@@ -77,5 +98,4 @@ module.exports = {
   showUpdate,
   updatePlaylist,
   addToPlaylist
-
 }
