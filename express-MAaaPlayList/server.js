@@ -16,13 +16,6 @@ var usersRouter = require('./routes/users')
 const songsRouter = require('./routes/songs')
 const playlistsRouter = require('./routes/playlists')
 
-
-var indexRouter = require('./routes/index')
-var usersRouter = require('./routes/users')
-const songsRouter = require('./routes/songs')
-const playlistsRouter=require("./routes/playlists")
-
-
 var app = express()
 
 // view engine setup
