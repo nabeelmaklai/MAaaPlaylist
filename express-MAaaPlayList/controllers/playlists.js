@@ -2,6 +2,7 @@ const Playlists = require('../models/playlist')
 const Song = require('../models/song')
 const API_TRACK_URL = 'https://api.deezer.com/track/'
 const axios = require('axios')
+const User = require('../models/user')
 
 const create = (req, res) => {
   // res.render('../views/playlists/playlists', { title: 'playlists' })
@@ -10,7 +11,12 @@ const create = (req, res) => {
 
 const newPlayList = async (req, res) => {
   try {
-    await Playlists.create(req.body)
+    const playlist = await Playlists.create(req.body)
+    const userId = req.user._id
+    const currentUser = await User.findById(userId)
+    console.log('This is the current user', currentUser)
+    currentUser.playlists.push(playlist._id)
+    await currentUser.save()
   } catch (error) {
     console.log('Error in playlist creation')
   }
@@ -18,13 +24,16 @@ const newPlayList = async (req, res) => {
 }
 
 const playlistIndex = async (req, res) => {
-  const allPlayLists = await Playlists.find({})
-  console.log(allPlayLists)
+  try {
+    const userID = req.user._id
+    const currentUser = await User.findById(userID).populate('playlists')
+    const allPlayLists = await currentUser.playlists
 
-  res.render('../views/playlists/playlists', {
-    title: 'playlists',
-    allPlayLists: allPlayLists
-  })
+    res.render('../views/playlists/playlists', {
+      title: 'playlists',
+      allPlayLists: allPlayLists
+    })
+  } catch (error) {}
 }
 
 const deletePlaylist = async (req, res) => {
@@ -85,13 +94,11 @@ const addToPlaylist = async (req, res) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist
         const playList = await Playlists.findById(playlistID)
-        console.log('This is the playlist ID console log', playlistID)
+
         if (!playList.songs.some((s) => s._id.equals(song._id))) {
-          console.log('this is the id ' + song.apiID)
           playList.songs.push(song)
-          console.log('these are songs ' + playList)
+
           await playList.save()
-          console.log('Added to playlist')
         }
       }
     })
