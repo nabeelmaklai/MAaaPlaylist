@@ -15,6 +15,7 @@
     <p><span class="song-detail-heading">Song Preview:</span>  &nbsp;  <audio controls ><source src="<%= songdetails.preview %>" type="audio/mp3"></audio></p>
   </div>
 </div>
+<% if (user) { %>
 <br><br><h2>Add to playlist</h2>
 <form id="add-playlist-form" method="POST"
 action="/songs/<%= songdetails.id %>/addToPlayList">
@@ -25,6 +26,7 @@ action="/songs/<%= songdetails.id %>/addToPlayList">
   </select>
   <input type="submit" value="Add To Playlist">
 </form>
+<% }  %>
 
 
 </div>
