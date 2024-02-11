@@ -80,11 +80,6 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    const playlistID = req.body.addToPlaylist
-    const playList = await Playlists.findById(playlistID)
-    playList.songs.push(song)
-    console.log(playList.songs)
-    await playList.save()
   } catch (error) {
     console.log('error in adding song to playlist')
   }
