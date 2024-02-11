@@ -1,20 +1,23 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/songdetails.css' />
 <div class="song-details-container"> 
- <img id="song-image" src="<%= songdetails.cover %>">
+ <img id="song-image" src="<%= songdetails.album.cover_xl %>">
  <div id="song">
   <div id="song-name">
-    <p><%=songdetails.name %></p>
+    <p><%=songdetails.title %></p>
   </div>
   <div id="song-details">
-    <p><span class="song-detail-heading">Artist:</span> &nbsp;<%= songdetails.artist %></p>
-    <p><span class="song-detail-heading">Genre:</span> &nbsp;<%= songdetails.genre %></p>
-    <p><span class="song-detail-heading">Release Year:</span>  &nbsp;<%= songdetails.releaseYear %></p>
+    <p><span class="song-detail-heading">Artist:</span> &nbsp;<%= songdetails.artist.name %></p>
+    <p><span class="song-detail-heading">Album:</span>  &nbsp;<%= songdetails.album.title %></p>
+    <p><span class="song-detail-heading">Duration:</span> &nbsp;<%= songdetails.duration %></p>
+    <p><span class="song-detail-heading">Release Year:</span>  &nbsp;<%= songdetails.release_date %></p>
+    <p><span class="song-detail-heading">Explicit:</span>  &nbsp;<%= songdetails.explicit_lyrics? 'Yes': 'No'%> </p>
+    <p><span class="song-detail-heading">Song Preview:</span>  &nbsp;  <audio controls ><source src="<%= songdetails.preview %>" type="audio/mp3"></audio></p>
   </div>
 </div>
 <br><br><h2>Add to playlist</h2>
 <form id="add-playlist-form" method="POST"
-action="/songs/<%= songdetails._id %>/addToPlayList">
+action="/songs/<%= songdetails._id %>addToPlayList">
   <select name="addToPlaylist">
     <% playlist.forEach((playlist) => { %>
       <option value="<%= playlist._id %>"><%= playlist.name %></option> 
