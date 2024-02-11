@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Protest+Riot&display=swap');
 html {
   height: 100%;
 }
@@ -12,10 +14,37 @@ h1 {
   color: white;
   margin: 2% auto;
   width: max-content;
-  font-size: 40px;
+  font-size: 5vh;
   color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 250;
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  animation: pulsate 1.7s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 3px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0033ab,
+      0 0 80px #0033ab;
+  }
+
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0033ab,
+      0 0 45px #0033ab, 0 0 55px #0033ab;
+  }
+  100% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab;
+  }
+  0% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+      0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab,
+      0 0 3rem #0033ab, inset 0 0 3.5rem #0033ab;
+  }
 }
 .songs-container {
   margin: 2% 20%;
@@ -35,14 +64,14 @@ h1 {
   margin-bottom: 10%;
 }
 #songs h3 {
-  font-size: 25px;
+  font-family: 'Protest Riot', sans-serif;
+  font-weight: 100;
+  font-size: 3vh;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
   font-style: normal;
-  color: rgb(236, 136, 118);
+  color: rgb(217, 208, 236);
   max-width: 300px;
-  min-height: 100px;
+  min-height: 10vh;
 }
 #songs a {
   --red: #ce0d0d;

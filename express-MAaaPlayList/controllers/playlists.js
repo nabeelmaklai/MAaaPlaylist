@@ -80,7 +80,6 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-
     AllSongs.forEach(async (song) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist

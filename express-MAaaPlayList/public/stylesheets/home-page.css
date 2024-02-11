@@ -27,32 +27,32 @@ nav {
   font-family: 'Sacramento', cursive;
   font-size: 12vh;
   margin-bottom: 50px;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fe1313,
-    0 0 82px #fe1313;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
   animation: pulsate 1.7s infinite alternate;
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   padding: 0.4em;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
-    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
 }
 @keyframes pulsate {
   100% {
-    text-shadow: 0 0 3px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #fe1313,
-      0 0 80px #fe1313;
+    text-shadow: 0 0 3px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0033ab,
+      0 0 80px #0033ab;
   }
 
   0% {
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #fe1313,
-      0 0 45px #fe1313, 0 0 55px #fe1313;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0033ab,
+      0 0 45px #0033ab, 0 0 55px #0033ab;
   }
   100% {
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab;
   }
   0% {
-    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
-      0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313,
-      0 0 3rem #fe1313, inset 0 0 3.5rem #fe1313;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+      0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab,
+      0 0 3rem #0033ab, inset 0 0 3.5rem #0033ab;
   }
 }
 
@@ -100,8 +100,7 @@ nav {
 #logo-img {
   margin-top: 3%;
   width: 15vh;
-  filter: drop-shadow(10px 10px 3px rgba(199, 36, 15, 0.938));
-
+  filter: drop-shadow(10px 10px 3px rgba(199, 15, 110, 0.938));
 }
 #select-text {
   user-select: none;
