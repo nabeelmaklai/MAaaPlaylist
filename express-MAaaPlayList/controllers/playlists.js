@@ -1,4 +1,5 @@
 const Playlists = require('../models/playlist')
+const Song = require('../models/song')
 
 const create = (req, res) => {
   // res.render('../views/playlists/playlists', { title: 'playlists' })
@@ -24,8 +25,22 @@ const playlistIndex = async (req, res) => {
   })
 }
 
+const addToPlaylist = async (req, res) => {
+  try {
+    const song = await Song.findById(req.params.id)
+    const playlistID = req.body.addToPlaylist
+    const playList = await Playlists.findById(playlistID)
+    playList.songs.push(song)
+    console.log(playList.songs)
+    await playList.save()
+  } catch (error) {
+    console.log('error in adding song to playlist')
+  }
+}
+
 module.exports = {
   create,
   newPlayList,
-  playlistIndex
+  playlistIndex,
+  addToPlaylist
 }

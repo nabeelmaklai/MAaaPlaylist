@@ -1,4 +1,5 @@
 const Song = require('../models/song')
+const Playlist = require('../models/playlist')
 
 const show = async (req, res) => {
   try {
@@ -21,7 +22,9 @@ const show = async (req, res) => {
 
 const details = async (req, res) => {
   const songdetails = await Song.findById(req.params.id)
-  res.render('songs/songdetails', { title: 'Details', songdetails })
+  const playlist = await Playlist.find({})
+  console.log(playlist)
+  res.render('songs/songdetails', { title: 'Details', songdetails, playlist })
 }
 
 module.exports = {
