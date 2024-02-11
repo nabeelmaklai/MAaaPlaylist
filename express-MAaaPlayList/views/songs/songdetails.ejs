@@ -12,6 +12,17 @@
     <p><span class="song-detail-heading">Release Year:</span>  &nbsp;<%= songdetails.releaseYear %></p>
   </div>
 </div>
+<br><br><h2>Add to playlist</h2>
+<form id="add-playlist-form" method="POST"
+action="/songs/<%= songdetails._id %>/addToPlayList">
+  <select name="addToPlaylist">
+    <% playlist.forEach((playlist) => { %>
+      <option value="<%= playlist._id %>"><%= playlist.name %></option> 
+    <% }); %>
+  </select>
+  <input type="submit" value="Add To Playlist">
+</form>
+
 
 </div>
 <%- include('../partials/footer') %>
