@@ -16,7 +16,7 @@ nav {
   padding: 15px;
   background: rgb(0, 0, 0);
   border-bottom: 1px white solid;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 35%, rgb(68, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 35%, rgb(0, 8, 68) 100%);
 }
 #nav-links {
   margin-top: 40px;
@@ -27,13 +27,25 @@ nav {
 .nav-items {
   margin-left: 25px;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 10px;
-  border: 2px white solid;
-  border-radius: 20px;
+  --red: #ce0d0d;
+  font-size: 1.5vh;
+  padding: 0.7em 2.2em;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: 2px solid white;
+  background: linear-gradient(
+    to right,
+    rgba(253, 148, 27, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(253, 208, 27, 0.1) 100%
+  );
+  color: white;
+  box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
+    0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
 .nav-items:hover {
-  color: rgb(227, 12, 12);
+  color: #bf150c;
+  box-shadow: inset 0 0 10px rgba(253, 57, 27, 0.6),
+    0 0 9px 3px rgba(253, 80, 27, 0.2);
 }
