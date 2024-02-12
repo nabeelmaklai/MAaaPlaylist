@@ -4,7 +4,9 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/home-page.css'/>
+  
   </head>
+
   <body>
     <nav>
       <% if (user) { %>
@@ -21,7 +23,27 @@
     <h2>Search For Songs</h2>
     <form id="search-song-form" action="/songs/songresults" method="POST">
       <input id="search-song-input" type="text" name="name" placeholder="search songs...">
+      <input id="search-artist-input" type="text" name="artist" placeholder="Artist Name">
+      <input id="advanceSearch" type="checkbox" name="advanceSearch">
+      <label for="advanceSearch">Advance Search</label>
       <br><input id="search-song-btn" type="submit" value="Search">
     </form>
     <%- include('./partials/footer') %>
 </div>
+<img id="monkey"src="images/jinxmonkey.webp">
+<img id="toy"src="images/jinxtoy.png">
+<img id="jinx"src="images/jinxwashere.png">
+<img id="skull"src="images/skull.webp">
+
+<audio controls autoplay loop   style="opacity: 0;"><source src="sounds/neon.mp3" type="audio/mp3"></audio>
+
+<script>
+  let checkbox = document.querySelector('#advanceSearch')
+  checkbox.addEventListener('change', (e) => {
+  if (e.currentTarget.checked) {
+    document.querySelector('#search-artist-input').style.display = 'block'
+  } else {
+    document.querySelector('#search-artist-input').style.display = 'none'
+  }
+})
+</script>

@@ -25,8 +25,9 @@ nav {
 #search-song h2 {
   color: rgb(255, 255, 255);
   font-family: 'Sacramento', cursive;
-  font-size: 12vh;
-  margin-bottom: 50px;
+  font-size: 5.5vw;
+  max-width: 40vw;
+  margin-bottom: 25px;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
     0 0 82px #0033ab;
   animation: pulsate 1.7s infinite alternate;
@@ -38,8 +39,7 @@ nav {
 }
 @keyframes pulsate {
   100% {
-    text-shadow: 0 0 3px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0033ab,
-      0 0 80px #0033ab;
+    text-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 40px #0033ab, 0 0 80px #0033ab;
   }
 
   0% {
@@ -59,19 +59,19 @@ nav {
 #search-song-input {
   margin: 0 15%;
   width: 70%;
-  height: 4vh;
-  border-radius: 20px;
+  height: 3vh;
+  border-radius: 10px;
   text-align: center;
-  font-size: 18px;
-  border: 1px rgb(183, 0, 0) solid;
+  font-size: 1vw;
+  border-bottom: 3px rgb(0, 17, 255) solid;
 }
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
   width: max-content;
-  margin: 1.5vh auto;
+  margin: 4vh auto;
   --red: #ce0d0d;
   font-size: 1.5vh;
-  padding: 0.5em 2em;
+  padding: 0.9em 2em;
   border-radius: 50px;
   transition: all 0.3s;
   border: 2px solid white;
@@ -104,4 +104,66 @@ nav {
 }
 #select-text {
   user-select: none;
+}
+#jinx {
+  width: 15vw;
+  position: absolute;
+  top: 25vh;
+  left: 5vw;
+  filter: drop-shadow(0px 0px 0px rgba(199, 15, 199, 0.938));
+  animation: blink 2s infinite steps(2, jump-end);
+}
+
+@keyframes blink {
+  25% {
+    filter: drop-shadow(10px 10px rgba(199, 15, 15, 0.938));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 0px rgba(199, 15, 199, 0.938));
+  }
+  100% {
+    filter: drop-shadow(10px 10px rgba(199, 15, 15, 0.938));
+  }
+}
+#skull {
+  width: 24vw;
+  position: absolute;
+  top: 25vh;
+  left: 63vw;
+  animation: blinkSkull 5s ease-in infinite;
+}
+@keyframes blinkSkull {
+  50%,
+  60%,
+  70%,
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#monkey {
+  width: 15vw;
+  position: absolute;
+  top: 65vh;
+  left: 80vw;
+}
+#toy {
+  width: 17vw;
+  position: absolute;
+  top: 70vh;
+  left: 15vw;
+}
+#search-artist-input {
+  display: none;
 }
