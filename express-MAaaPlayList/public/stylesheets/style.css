@@ -2,6 +2,7 @@
 html,
 body {
   height: 100%;
+  color: white;
 }
 body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
