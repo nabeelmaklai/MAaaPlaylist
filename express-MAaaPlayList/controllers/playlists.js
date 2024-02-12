@@ -119,6 +119,13 @@ const viewPlaylist = async (req, res) => {
   })
 }
 
+const removeSong = async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 module.exports = {
   create,
   newPlayList,
@@ -127,5 +134,6 @@ module.exports = {
   showUpdate,
   updatePlaylist,
   addToPlaylist,
-  viewPlaylist
+  viewPlaylist,
+  removeSong
 }
