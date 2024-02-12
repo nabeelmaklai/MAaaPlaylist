@@ -1,4 +1,28 @@
 <%- include("../partials/header") %>
 <link rel='stylesheet' href='/stylesheets/view.css' />
-
+<div id="page">
+  <div id="left-side">
+<div id="playlist-box">
+  <h3><%=selectView.name%></h3>
+  <div id="box-description">
+    <h4>Description:</h4>
+    <h5><%= selectView.description%></h5>
+  </div>
+</div>
+<form action="/<%= selectView._id %>?_method=DELETE" method="POST">
+  <button type="submit">Delete</button>
+</form>
+<form action="/<%= selectView._id %>" method="GET">
+  <button type="submit">Update</button>
+</form>
+</div>
+<div id="song-box">
+<% selectView.songs.forEach((song)=>{ %>
+  <a href="/songs/<%=song.id%>"><%= song.cover %></a>
+  <a href="/songs/<%=song.id%>"><%= song.name %></a>
+<%= song.artist %>
+<form action="/playlists/<%= selectView._id %>/<%= song._id%>?_method=DELETE" method="POST"><button type="submit">Remove from Playlist</button></form>
+<%})%>
+</div>
+</div>
 <%- include("../partials/footer") %>

@@ -108,14 +108,14 @@ const addToPlaylist = async (req, res) => {
 const viewPlaylist = async (req, res) => {
   let selectView
   try {
-    select = await Playlists.findOne({ _id: req.params.id })
+    selectView = await Playlists.findOne({ _id: req.params.id })
     console.log(selectView)
   } catch (error) {
     console.log(error)
   }
   res.render('playlists/view', {
     title: 'View the Playlist',
-    select
+    selectView
   })
 }
 
