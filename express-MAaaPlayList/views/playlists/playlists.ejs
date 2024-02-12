@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
-<link rel='stylesheet' href='/stylesheets/searchresults.css' />
+<link rel='stylesheet' href='/stylesheets/playlists.css' />
 
-<div class="songs-container">
+<div class="playlist-container">
+<div class="addPlaylist-container">
   <form id="search-song-form"  action="/new" method="POST">
     <label>Name:</label>
     <input type="text" name="name">
@@ -9,13 +10,19 @@
     <input type="text" name="description">
     <br>
     <input  type="submit" value="Add Playlist">
+    </form></div>
   </form>
-<br>
 
+<div class="user-container">
+  <img src="<%=user.avatar%>">
+    <p> <%= user.name.toUpperCase() %></p>
+    <p><%= user.playlists.length %> Playlists</p>
+  </div>
+  </div>
+  
 
-
+<div class="playlist-container">
 <% allPlayLists.forEach(playlist => { %>
-  <div class="songs-container">
   <h3><%= playlist.name %></h3>
     <h3><%= playlist.description %></h3>
     <form action="/<%= playlist._id %>?_method=DELETE" method="POST">

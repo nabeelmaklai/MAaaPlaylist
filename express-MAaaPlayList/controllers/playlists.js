@@ -28,10 +28,12 @@ const playlistIndex = async (req, res) => {
     const userID = req.user._id
     const currentUser = await User.findById(userID).populate('playlists')
     const allPlayLists = await currentUser.playlists
+    const userDetails = await User.findById(userID)
 
     res.render('../views/playlists/playlists', {
       title: 'playlists',
-      allPlayLists: allPlayLists
+      allPlayLists: allPlayLists,
+      userDetails
     })
   } catch (error) {}
 }
