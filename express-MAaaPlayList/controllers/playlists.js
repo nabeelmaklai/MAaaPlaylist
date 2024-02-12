@@ -35,9 +35,7 @@ const playlistIndex = async (req, res) => {
       allPlayLists: allPlayLists,
       userDetails
     })
-  } catch (error) {
-    console.log('This is the index error')
-  }
+  } catch (error) {}
 }
 
 const deletePlaylist = async (req, res) => {
