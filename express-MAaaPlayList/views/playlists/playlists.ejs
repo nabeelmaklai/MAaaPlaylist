@@ -12,10 +12,22 @@
   </form>
 <br>
 
+<div class="songs-container">
+  <% userDetails.forEach(user => { %>
+    <h3><%= user.name %></h3>
+      <h3><%= playlist.description %></h3>
+      <form action="/<%= playlist._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+      <form action="/<%= playlist._id %>" method="GET">
+        <button type="submit">Update</button>
+      </form>
+    <br>
+  </div>
+  <% }); %>
 
-
+<div class="songs-container">
 <% allPlayLists.forEach(playlist => { %>
-  <div class="songs-container">
   <h3><%= playlist.name %></h3>
     <h3><%= playlist.description %></h3>
     <form action="/<%= playlist._id %>?_method=DELETE" method="POST">
