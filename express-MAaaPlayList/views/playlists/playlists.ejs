@@ -18,11 +18,8 @@
   <div class="songs-container">
   <h3><%= playlist.name %></h3>
     <h3><%= playlist.description %></h3>
-    <form action="/<%= playlist._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-    </form>
-    <form action="/<%= playlist._id %>" method="GET">
-      <button type="submit">Update</button>
+    <form action="/view/<%= playlist._id %>" method="GET">
+      <button type="submit">View</button>
     </form>
   <br>
 </div>

@@ -105,6 +105,19 @@ const addToPlaylist = async (req, res) => {
     console.log('error in adding song to playlist ' + error)
   }
 }
+const viewPlaylist = async (req, res) => {
+  let selectView
+  try {
+    select = await Playlists.findOne({ _id: req.params.id })
+    console.log(selectView)
+  } catch (error) {
+    console.log(error)
+  }
+  res.render('playlists/view', {
+    title: 'View the Playlist',
+    select
+  })
+}
 
 module.exports = {
   create,
@@ -113,5 +126,6 @@ module.exports = {
   deletePlaylist,
   showUpdate,
   updatePlaylist,
-  addToPlaylist
+  addToPlaylist,
+  viewPlaylist
 }

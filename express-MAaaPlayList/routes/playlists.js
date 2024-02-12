@@ -9,5 +9,6 @@ router.get('/new', playlistsCtrl.playlistIndex)
 router.delete('/:id', playlistsCtrl.deletePlaylist)
 router.get('/:id', playlistsCtrl.showUpdate)
 router.put('/:id', playlistsCtrl.updatePlaylist)
+router.get('/view/:id', playlistsCtrl.viewPlaylist)
 router.post('/songs/:id/addToPlayList', playlistsCtrl.addToPlaylist)
 module.exports = router
