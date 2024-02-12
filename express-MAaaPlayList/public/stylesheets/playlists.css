@@ -39,10 +39,11 @@ body {
   /* align-items: flex-start; */
   align-content: space-between;
 }
-.addPlaylist-container {
+.user-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+  background-color: #760bda;
 }
 
 .user-details {
