@@ -1,0 +1,147 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  line-height: 1.6;
+}
+
+.page-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for the left-side playlist details */
+.playlist-details {
+  width: 35%;
+  background: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-header {
+  margin-bottom: 20px;
+}
+
+.playlist-name {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.playlist-description p {
+  font-size: 16px;
+  color: #666;
+}
+
+.playlist-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-form,
+.update-form {
+  flex-basis: 48%;
+}
+
+.delete-button,
+.update-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.update-button {
+  background: #3498db;
+}
+
+/* Styling for the songs container */
+.songs-container {
+  width: 60%;
+}
+
+.song-item {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-cover img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-name {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.song-artist {
+  font-size: 16px;
+  color: #666;
+}
+
+.remove-song-form {
+  flex-basis: 25%;
+}
+
+.remove-song-button {
+  padding: 10px 20px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.delete-button:hover,
+.update-button:hover,
+.remove-song-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .playlist-details,
+  .songs-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

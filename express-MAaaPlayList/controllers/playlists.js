@@ -50,7 +50,7 @@ const deletePlaylist = async (req, res) => {
 const showUpdate = async (req, res) => {
   let select
   try {
-    select = await Playlists.findOne({ _id: req.params.id })
+    select = await Playlists.findById(req.params.id)
   } catch (error) {
     console.log(error)
   }
@@ -123,6 +123,12 @@ const viewPlaylist = async (req, res) => {
 
 const removeSong = async (req, res) => {
   try {
+    const playlistId = req.params.id
+    const songId = req.params.songId
+    const playlist = await Playlists.findById(playlistId)
+    playlist.songs = playlist.songs.filter((song) => song.toString() !== songId)
+    await playlist.save()
+    res.redirect('/playlists/view/' + playlistId)
   } catch (error) {
     console.log(error)
   }

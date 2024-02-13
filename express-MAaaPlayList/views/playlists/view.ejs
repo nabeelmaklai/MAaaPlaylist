@@ -1,28 +1,40 @@
 <%- include("../partials/header") %>
 <link rel='stylesheet' href='/stylesheets/view.css' />
-<div id="page">
-  <div id="left-side">
-<div id="playlist-box">
-  <h3><%=selectView.name%></h3>
-  <div id="box-description">
-    <h4>Description:</h4>
-    <h5><%= selectView.description%></h5>
+
+<div class="page-container">
+  <div class="playlist-details">
+    <div class="playlist-header">
+      <h1 class="playlist-name"><%= selectView.name %></h1>
+      <div class="playlist-description">
+        <p><%= selectView.description %></p>
+      </div>
+    </div>
+    <div class="playlist-actions">
+      <form action="/<%= selectView._id %>?_method=DELETE" method="POST" class="delete-form">
+        <button type="submit" class="delete-button">Delete Playlist</button>
+      </form>
+      <form action="/<%= selectView._id %>" method="GET" class="update-form">
+        <button type="submit" class="update-button">Edit Playlist Details</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="songs-container">
+    <% selectView.songs.forEach((song) => { %>
+      <div class="song-item">
+        <div class="song-cover">
+          <img src="<%= song.cover %>">
+        </div>
+        <div class="song-details">
+          <a href="/songs/<%= song.id %>" class="song-name"><%= song.name %></a>
+          <div class="song-artist"><%= song.artist %></div>
+        </div>
+        <form action="/playlists/<%= selectView._id %>/<%= song._id %>?_method=DELETE" method="POST" class="remove-song-form">
+          <button type="submit" class="remove-song-button">Remove from Playlist</button>
+        </form>
+      </div>
+    <% }) %>
   </div>
 </div>
-<form action="/<%= selectView._id %>?_method=DELETE" method="POST">
-  <button type="submit">Delete</button>
-</form>
-<form action="/<%= selectView._id %>" method="GET">
-  <button type="submit">Update</button>
-</form>
-</div>
-<div id="song-box">
-<% selectView.songs.forEach((song)=>{ %>
-  <a href="/songs/<%=song.id%>"><%= song.cover %></a>
-  <a href="/songs/<%=song.id%>"><%= song.name %></a>
-<%= song.artist %>
-<form action="/playlists/<%= selectView._id %>/<%= song._id%>?_method=DELETE" method="POST"><button type="submit">Remove from Playlist</button></form>
-<%})%>
-</div>
-</div>
+
 <%- include("../partials/footer") %>
