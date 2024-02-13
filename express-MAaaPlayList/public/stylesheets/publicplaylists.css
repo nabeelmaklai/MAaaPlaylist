@@ -1,0 +1,10 @@
+#playlist-container {
+  margin: 10% 6%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+}
+#song-image {
+  width: 7vh;
+  height: 7vh;
+}
