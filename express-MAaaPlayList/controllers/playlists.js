@@ -117,7 +117,7 @@ const viewPlaylist = async (req, res) => {
   let selectView
   try {
     selectView = await Playlists.findOne({ _id: req.params.id })
-    console.log(selectView)
+    console.log('This is the ')
   } catch (error) {
     console.log(error)
   }

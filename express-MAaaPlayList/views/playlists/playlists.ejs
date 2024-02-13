@@ -1,36 +1,37 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/playlists.css' />
 
-<div class="playlist-container">
-<div class="addPlaylist-container">
-  <form id="search-song-form"  action="/new" method="POST">
-    <label>Name:</label>
-    <input type="text" name="name">
-    <label>Description:</label>
-    <input type="text" name="description">
-    <br>
-    <input  type="submit" value="Add Playlist">
-    </form></div>
-  </form>
+<div class="playlist-user-container">
+  <div class="user-container">
+    <img src="<%=user.avatar%>">
+      <p> <%= user.name.toUpperCase() %></p>
+      <p><%= user.playlists.length %> Playlists</p>
+  </div>
 
-<div class="user-container">
-  <img src="<%=user.avatar%>">
-    <p> <%= user.name.toUpperCase() %></p>
-    <p><%= user.playlists.length %> Playlists</p>
-  </div>
-  </div>
+  <div class="addPlaylist-container">
+    <form id="search-song-form"  action="/new" method="POST">
+      <h3>Add a Playlist</h3>
+      <label>Name</label>
+      <input type="text" name="name">
+      <label>Description</label>
+      <input class="description-box" type="text" name="description">
+      <input  class="add-playlist-btn" type="submit" value="Add Playlist">
+      </form>
+    </div>
+  
+</div>
+
   
 
 <div class="playlist-container">
 <% allPlayLists.forEach(playlist => { %>
-  <h3><%= playlist.name %></h3>
-    <h3><%= playlist.description %></h3>
-    <form action="/view/<%= playlist._id %>" method="POST">
-      <button type="submit">View</button>
+    <h4><%= playlist.name %></h4>
+    <p><%= playlist.description %></p>
+    <form action="/view/<%= playlist._id %>" method="GET">
+      <button class="add-playlist-btn" type="submit">View</button>
     </form>
-  <br>
-</div>
-<% }); %>
+    <br>
+    <% }); %>
 </div>
 <%- include('../partials/footer') %>
 
