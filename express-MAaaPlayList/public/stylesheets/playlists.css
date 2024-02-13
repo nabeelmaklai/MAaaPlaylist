@@ -104,3 +104,10 @@ body {
 
   overflow-y: auto;
 }
+
+.edit-playlist {
+  display: flex;
+  flex-direction: column;
+  background-color: #ce0d0d;
+  align-items: center;
+}
