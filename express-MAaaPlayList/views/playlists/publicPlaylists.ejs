@@ -1,16 +1,20 @@
 <%- include('../partials/header') %>
-<div class="playlist-container">
-  <% publicPlaylists.forEach(playlist => { %>
-      <h4><%= playlist.name %></h4>
-      <p><%= playlist.description %></p>
-    <% playlist.songs.forEach((song) => {%>
-      <p><%= song.title%></p>
-      <p><%= song.artist%></p>
-      <p><%= song.cover%></p>
- 
-     <% })%>
+<link rel='stylesheet' href='/stylesheets/publicplaylists.css'/>
 
-      <% }); %>
+
+<div id="playlist-container">
+<% publicPlaylists.forEach(playlist => { %>
+<div id="playlists">
+    <h4><%= playlist.name %></h4>
+  <% playlist.songs.forEach((song) => {%>
+      <div id="song-container">
+        <p><%= song.title%></p>
+        <p><%= song.artist%></p>
+        <img id="song-image" src="<%= song.cover%>">
+      </div>
+    <% })%>
   </div>
+  <% }); %>
+</div>
 
 <%- include('../partials/footer') %>
