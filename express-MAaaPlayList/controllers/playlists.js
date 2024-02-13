@@ -91,7 +91,7 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    const updatedSongs = await Song.find({});
+    const updatedSongs = await Song.find({})
     updatedSongs.forEach(async (song) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist
@@ -112,7 +112,7 @@ const viewPlaylist = async (req, res) => {
   let selectView
   try {
     selectView = await Playlists.findOne({ _id: req.params.id })
-    console.log(selectView)
+    console.log('This is the ')
   } catch (error) {
     console.log(error)
   }
