@@ -3,17 +3,20 @@
 <div class="song-details-container"> 
  <img id="song-image" src="<%= songdetails.album.cover_xl %>">
  <div id="song">
-  <div id="song-name">
-    <p><%=songdetails.title %></p>
+  <div id="song-heading">
+    <p id="song-title"><%=songdetails.title %></p>
+    <p id="artist">by &nbsp;<%= songdetails.artist.name %></p>
   </div>
   <div id="song-details">
-    <p><span class="song-detail-heading">Artist:</span> &nbsp;<%= songdetails.artist.name %></p>
-    <p><span class="song-detail-heading">Album:</span>  &nbsp;<%= songdetails.album.title %></p>
-    <p><span class="song-detail-heading">Duration:</span> &nbsp;<%= songdetails.duration %></p>
-    <p><span class="song-detail-heading">Release Year:</span>  &nbsp;<%= songdetails.release_date %></p>
-    <p><span class="song-detail-heading">Explicit:</span>  &nbsp;<%= songdetails.explicit_lyrics? 'Yes': 'No'%> </p>
-    <p><span class="song-detail-heading">Song Preview:</span>  &nbsp;  <audio controls ><source src="<%= songdetails.preview %>" type="audio/mp3"></audio></p>
+  
+    <p><p class="song-detail-heading">Album:</p>  &nbsp;<%= songdetails.album.title %></p>
+
+    <p><p class="song-detail-heading">Duration:</p> &nbsp;<%= songdetails.duration %> seconds</p>
+    <p><p class="song-detail-heading">Release Date:</p>  &nbsp;<%= songdetails.release_date %></p>
+    <p><p class="song-detail-heading">Explicit:</p>  &nbsp;<%= songdetails.explicit_lyrics? 'Yes': 'No'%> </p>
+   
   </div>
+  <audio controls ><source src="<%= songdetails.preview %>" type="audio/mp3"></audio>
 </div>
 <% if (user) { %>
 <br><br><h2>Add to playlist</h2>

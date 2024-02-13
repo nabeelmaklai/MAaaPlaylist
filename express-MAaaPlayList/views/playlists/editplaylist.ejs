@@ -2,6 +2,8 @@
 <form action="/<%= select._id %>?_method=PUT" method="POST">
   <input type="text"name="name" value="<%= select.name%>">
   <input type="text"name="description" value="<%= select.description%>">
+  <label>Public</label>
+  <input type="checkbox" name="public" <%= select.public? 'Checked': ''%>>
   <button type="submit">Update playlist</button>
 </form>
 <%- include("../partials/footer") %>

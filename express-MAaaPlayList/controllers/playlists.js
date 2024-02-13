@@ -10,11 +10,11 @@ const create = (req, res) => {
 }
 
 const newPlayList = async (req, res) => {
+  req.body.public = !!req.body.public
   try {
     const playlist = await Playlists.create(req.body)
     const userId = req.user._id
     const currentUser = await User.findById(userId)
-    console.log('This is the current user', currentUser)
     currentUser.playlists.push(playlist._id)
     await currentUser.save()
   } catch (error) {
@@ -35,7 +35,9 @@ const playlistIndex = async (req, res) => {
       allPlayLists: allPlayLists,
       userDetails
     })
-  } catch (error) {}
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const deletePlaylist = async (req, res) => {
@@ -64,6 +66,7 @@ const showUpdate = async (req, res) => {
   })
 }
 const updatePlaylist = async (req, res) => {
+  req.body.public = !!req.body.public
   try {
     await Playlists.findOneAndUpdate({ _id: req.params.id }, req.body)
   } catch (error) {
@@ -117,7 +120,6 @@ const viewPlaylist = async (req, res) => {
   let selectView
   try {
     selectView = await Playlists.findOne({ _id: req.params.id })
-    console.log('This is the ')
   } catch (error) {
     console.log(error)
   }
@@ -151,6 +153,27 @@ const songsDetails = async (req, res) => {
     console.log(error)
   }
 }
+const publicPlaylistIndex = async (req, res) => {
+  try {
+    const publicPlaylists = await Playlists.find({ public: true }).populate(
+      'songs'
+    )
+    publicPlaylists.forEach((playlist) => {
+      console.log(playlist.songs)
+      playlist.songs.forEach((song) => {
+        console.log(song.title)
+        console.log(song.artist)
+        console.log(song.cover)
+      })
+    })
+    res.render('../views/playlists/publicPlaylists', {
+      title: 'Public Playlists',
+      publicPlaylists
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
 module.exports = {
   create,
   newPlayList,
@@ -161,5 +184,6 @@ module.exports = {
   addToPlaylist,
   viewPlaylist,
   removeSong,
+  publicPlaylistIndex,
   songsDetails
 }

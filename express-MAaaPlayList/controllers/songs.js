@@ -3,6 +3,7 @@ const API_URL = 'https://api.deezer.com/search?q='
 const API_TRACK_URL = 'https://api.deezer.com/track/'
 const axios = require('axios')
 const Playlist = require('../models/playlist')
+const User = require('../models/user')
 
 const show = async (req, res) => {
   try {
@@ -32,7 +33,9 @@ const show = async (req, res) => {
 
 const details = async (req, res) => {
   const songdetails = await axios.get(API_TRACK_URL + req.params.id)
-  const playlist = await Playlist.find({})
+  const userID = req.user._id
+  const currentUser = await User.findById(userID).populate('playlists')
+  const playlist = await currentUser.playlists
   res.render('songs/songdetails', {
     title: 'Details',
     songdetails: songdetails.data,

@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 body {
   padding: 0;
-  background-color: black;
-  background-color: #010a01;
-  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
 }
 nav {
   flex-direction: row;
@@ -66,8 +63,8 @@ nav {
   border-bottom: 3px rgb(0, 17, 255) solid;
 }
 #search-artist-input {
-  width: 40%;
-  margin: 1vh 1.7vh;
+  width: 50%;
+  margin: 0 auto;
 }
 #basic-search {
   display: flex;
@@ -83,15 +80,16 @@ nav {
   justify-content: center;
   align-items: center;
 }
-#advanceSearch {
-  width: 1vw;
-}
+
 input[type='checkbox'] {
   accent-color: rgb(200, 23, 227);
+  transform: scale(1.5);
+  margin-right: 15px;
 }
 #advancelabel {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   padding-left: 4px;
+  font-family: 'Teko', sans-serif;
 }
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
