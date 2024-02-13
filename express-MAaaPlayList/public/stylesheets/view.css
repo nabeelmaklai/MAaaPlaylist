@@ -1,4 +1,3 @@
-/* Reset some basic elements */
 body,
 h1,
 h2,
@@ -10,8 +9,6 @@ form {
   margin: 0;
   padding: 0;
 }
-
-/* Basic styling for the page */
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -25,8 +22,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* Styling for the left-side playlist details */
 .playlist-details {
   width: 35%;
   background: #fff;
@@ -74,8 +69,6 @@ body {
 .update-button {
   background: #3498db;
 }
-
-/* Styling for the songs container */
 .songs-container {
   width: 60%;
 }
@@ -125,23 +118,15 @@ body {
   cursor: pointer;
 }
 
-/* Hover effects */
 .delete-button:hover,
 .update-button:hover,
 .remove-song-button:hover {
   opacity: 0.9;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .page-container {
-    flex-direction: column;
-  }
-
-  .playlist-details,
-  .songs-container {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
+.playlist-details,
+.songs-container {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 20px;
 }
