@@ -50,7 +50,7 @@ const deletePlaylist = async (req, res) => {
 const showUpdate = async (req, res) => {
   let select
   try {
-    select = await Playlists.findOne({ _id: req.params.id })
+    select = await Playlists.findById(req.params.id)
   } catch (error) {
     console.log(error)
   }
@@ -108,6 +108,32 @@ const addToPlaylist = async (req, res) => {
     console.log('error in adding song to playlist ' + error)
   }
 }
+const viewPlaylist = async (req, res) => {
+  let selectView
+  try {
+    selectView = await Playlists.findOne({ _id: req.params.id })
+    console.log(selectView)
+  } catch (error) {
+    console.log(error)
+  }
+  res.render('playlists/view', {
+    title: 'View the Playlist',
+    selectView
+  })
+}
+
+const removeSong = async (req, res) => {
+  try {
+    const playlistId = req.params.id
+    const songId = req.params.songId
+    const playlist = await Playlists.findById(playlistId)
+    playlist.songs = playlist.songs.filter((song) => song.toString() !== songId)
+    await playlist.save()
+    res.redirect('/playlists/view/' + playlistId)
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 module.exports = {
   create,
@@ -116,5 +142,7 @@ module.exports = {
   deletePlaylist,
   showUpdate,
   updatePlaylist,
-  addToPlaylist
+  addToPlaylist,
+  viewPlaylist,
+  removeSong
 }
