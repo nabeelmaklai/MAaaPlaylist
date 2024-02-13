@@ -91,7 +91,8 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    AllSongs.forEach(async (song) => {
+    const updatedSongs = await Song.find({});
+    updatedSongs.forEach(async (song) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist
         const playList = await Playlists.findById(playlistID)
