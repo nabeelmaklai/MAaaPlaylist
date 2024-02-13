@@ -3,6 +3,9 @@ html,
 body {
   height: 100%;
   color: white;
+  background-color: black;
+  background-color: #010a01;
+  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
 }
 body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;

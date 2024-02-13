@@ -15,18 +15,19 @@
       <input type="text" name="name">
       <label>Description</label>
       <input class="description-box" type="text" name="description">
+      <label>Public</label>
+      <input type="checkbox" name="public">
       <input  class="add-playlist-btn" type="submit" value="Add Playlist">
       </form>
     </div>
   
 </div>
 
-  
-
 <div class="playlist-container">
 <% allPlayLists.forEach(playlist => { %>
     <h4><%= playlist.name %></h4>
     <p><%= playlist.description %></p>
+    <p><%= playlist.public? 'Public':'Private' %></p>
     <form action="/view/<%= playlist._id %>" method="GET">
       <button class="add-playlist-btn" type="submit">View</button>
     </form>

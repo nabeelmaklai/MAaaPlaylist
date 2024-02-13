@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 body {
   padding: 0;
-  background-color: black;
-  background-color: #010a01;
-  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
 }
 nav {
   flex-direction: row;
