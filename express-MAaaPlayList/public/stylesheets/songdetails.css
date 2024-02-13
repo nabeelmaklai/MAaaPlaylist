@@ -29,8 +29,8 @@ body {
 
 #song-details {
   font-size: 1.8vh;
-}a
-.song-detail-heading {
+}
+a .song-detail-heading {
   font-weight: bold;
   color: rgb(0, 221, 255);
   font-size: 2vh;
