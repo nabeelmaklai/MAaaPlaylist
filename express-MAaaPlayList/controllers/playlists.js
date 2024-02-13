@@ -134,12 +134,23 @@ const removeSong = async (req, res) => {
     const playlist = await Playlists.findById(playlistId)
     playlist.songs = playlist.songs.filter((song) => song.toString() !== songId)
     await playlist.save()
-    res.redirect('/playlists/view/' + playlistId)
+    res.render('playlists/view', {
+      selectView: playlist,
+      title: 'View the Playlist'
+    })
   } catch (error) {
     console.log(error)
   }
 }
-
+const songsDetails = async (req, res) => {
+  try {
+    const playlist = await Playlists.findById(req.params.id).populate('songs')
+    console.log(playlist)
+    res.render('playlists/view', { selectView: playlist })
+  } catch (error) {
+    console.error(error)
+  }
+}
 module.exports = {
   create,
   newPlayList,
@@ -149,5 +160,6 @@ module.exports = {
   updatePlaylist,
   addToPlaylist,
   viewPlaylist,
-  removeSong
+  removeSong,
+  songsDetails
 }

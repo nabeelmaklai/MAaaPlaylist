@@ -13,7 +13,7 @@
       <form action="/<%= selectView._id %>?_method=DELETE" method="POST" class="delete-form">
         <button type="submit" class="delete-button">Delete Playlist</button>
       </form>
-      <form action="/<%= selectView._id %>" method="GET" class="update-form">
+      <form action="/<%= selectView._id %>" method="POST" class="update-form">
         <button type="submit" class="update-button">Edit Playlist Details</button>
       </form>
     </div>
@@ -26,10 +26,10 @@
           <img src="<%= song.cover %>">
         </div>
         <div class="song-details">
-          <a href="/songs/<%= song.id %>" class="song-name"><%= song.name %></a>
+          <a href="/songs/<%= song._id %>" class="song-name"><%= song.title %></a>
           <div class="song-artist"><%= song.artist %></div>
         </div>
-        <form action="/playlists/<%= selectView._id %>/<%= song._id %>?_method=DELETE" method="POST" class="remove-song-form">
+        <form action="/<%= selectView._id %>/<%= song._id %>?_method=DELETE" method="POST" class="remove-song-form">
           <button type="submit" class="remove-song-button">Remove from Playlist</button>
         </form>
       </div>
