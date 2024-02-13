@@ -6,11 +6,24 @@ const Playlist = require('../models/playlist')
 
 const show = async (req, res) => {
   try {
-    const response = await axios.get(API_URL + req.body.name)
+    console.log(req.body)
+    let response
+    if (req.body.artist === '') {
+      response = await axios.get(API_URL + req.body.name)
+    } else if (req.body.artist !== '' && req.body.name !== '') {
+      response = await axios.get(
+        `https://api.deezer.com/search?q=artist:"${req.body.artist}" track:"${req.body.name}"`
+      )
+    } else if (req.body.artist !== '' && req.body.name === '') {
+      response = await axios.get(
+        `https://api.deezer.com/search?q=artist:"${req.body.artist}"`
+      )
+    }
     res.render('songs/songresults', {
       title: 'Song Results',
       songs: response.data.data,
-      searchQuery: req.body.name
+      songName: req.body.name,
+      artistName: req.body.artist
     })
   } catch (error) {
     console.log(error)
