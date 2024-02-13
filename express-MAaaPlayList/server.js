@@ -45,7 +45,6 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter)
 app.use('/songs', songsRouter)
-app.use('/:id', songsRouter)
 app.use('/users', usersRouter)
 app.use('/', playlistsRouter)
 
