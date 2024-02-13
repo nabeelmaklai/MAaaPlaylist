@@ -41,6 +41,10 @@ const playlistIndex = async (req, res) => {
 const deletePlaylist = async (req, res) => {
   try {
     await Playlists.findOneAndDelete({ _id: req.params.id })
+    await User.updateMany(
+      { playlists: req.params.id },
+      { $pull: { playlists: req.params.id } }
+    )
   } catch (error) {
     console.log(error)
   }
@@ -91,7 +95,7 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    const updatedSongs = await Song.find({});
+    const updatedSongs = await Song.find({})
     updatedSongs.forEach(async (song) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist
@@ -107,6 +111,7 @@ const addToPlaylist = async (req, res) => {
   } catch (error) {
     console.log('error in adding song to playlist ' + error)
   }
+  res.redirect('/')
 }
 const viewPlaylist = async (req, res) => {
   let selectView
