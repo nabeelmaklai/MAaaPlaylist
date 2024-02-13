@@ -20,13 +20,13 @@
   </div>
   
   <div class="songs-container">
-    <% selectView.songs.forEach((song) => { %>
+    <% selectView.songs?.forEach((song) => { %>
       <div class="song-item">
         <div class="song-cover">
           <img src="<%= song.cover %>">
         </div>
         <div class="song-details">
-          <a href="/songs/<%= song._id %>" class="song-name"><%= song.title %></a>
+          <div class="song-name"><%= song.title %></div>
           <div class="song-artist"><%= song.artist %></div>
         </div>
         <form action="/<%= selectView._id %>/<%= song._id %>?_method=DELETE" method="POST" class="remove-song-form">
