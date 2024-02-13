@@ -12,61 +12,95 @@ body {
 }
 
 .user-container {
-  margin: 3% 5%;
-  /* margin-top: 3%;
-  margin-left: 5%; */
-  align-items: flex-start;
-  /* align-content: space-between; */
+  width: 30%;
+  margin-left: 20px;
+  border: 0.2rem solid #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
+    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 40px;
-  font-family: 'Times New Roman', Times, serif; */
-  justify-content: flex-start;
-  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
 }
-.playlist-container {
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* justify-content: flex-end; */
-  /* justify-content: start; */
-  /* align-items: center; */
-  /* align-content: space-between; */
-  /* margin: 3% 3%; */
+.playlist-user-container {
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
-  /* justify-content: flex-end; */
-  flex-direction: row-reverse;
-  background-color: #ef1b0f;
-  column-gap: 50vw;
-  /* align-items: flex-start; */
-  align-content: space-between;
-}
-.user-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  justify-content: space-around;
 }
 
 .user-container img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 30%;
+  padding-top: 2%;
 }
 
 .addPlaylist-container {
-  /* margin-top: 3%;
-  margin-right: 5%; */
-  margin: 3% 5%;
+  width: 40%;
+  font-size: 1vw;
   display: flex;
-  align-self: flex-end;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: medium;
+}
+.addPlaylist-container label {
+  text-align: center;
 }
 
-.user-details {
+.playlist-container {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  justify-content: first baseline;
+}
+/* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
+.add-playlist-btn {
+  width: max-content;
+  margin: 4vh auto;
+  --red: #ce0d0d;
+  font-size: 1.5vh;
+  padding: 0.9em 2em;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: 2px solid white;
+  background: linear-gradient(
+    to right,
+    rgba(253, 148, 27, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(253, 208, 27, 0.1) 100%
+  );
+  color: white;
+  box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
+    0 0 9px 3px rgba(221, 31, 14, 0.1);
+}
+
+#search-song-form {
+  display: flex;
+  flex-direction: column;
+}
+.description-box {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .playlist-container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
+    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
+  max-height: 100px;
+
+  overflow-y: auto;
 }

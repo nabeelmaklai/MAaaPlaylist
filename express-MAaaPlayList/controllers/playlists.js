@@ -41,6 +41,10 @@ const playlistIndex = async (req, res) => {
 const deletePlaylist = async (req, res) => {
   try {
     await Playlists.findOneAndDelete({ _id: req.params.id })
+    await User.updateMany(
+      { playlists: req.params.id },
+      { $pull: { playlists: req.params.id } }
+    )
   } catch (error) {
     console.log(error)
   }
@@ -91,7 +95,7 @@ const addToPlaylist = async (req, res) => {
     if (songExists === false) {
       await Song.create(songToAdd)
     }
-    const updatedSongs = await Song.find({});
+    const updatedSongs = await Song.find({})
     updatedSongs.forEach(async (song) => {
       if (song.apiID === req.params.id) {
         const playlistID = req.body.addToPlaylist
@@ -107,12 +111,13 @@ const addToPlaylist = async (req, res) => {
   } catch (error) {
     console.log('error in adding song to playlist ' + error)
   }
+  res.redirect('/')
 }
 const viewPlaylist = async (req, res) => {
   let selectView
   try {
     selectView = await Playlists.findOne({ _id: req.params.id })
-    console.log(selectView)
+    console.log('This is the ')
   } catch (error) {
     console.log(error)
   }
@@ -129,12 +134,23 @@ const removeSong = async (req, res) => {
     const playlist = await Playlists.findById(playlistId)
     playlist.songs = playlist.songs.filter((song) => song.toString() !== songId)
     await playlist.save()
-    res.redirect('/playlists/view/' + playlistId)
+    res.redirect(`/view/${playlistId}`)
   } catch (error) {
     console.log(error)
   }
 }
-
+const songsDetails = async (req, res) => {
+  try {
+    const playlist = await Playlists.findById(req.params.id).populate('songs')
+    console.log(playlist)
+    res.render('playlists/view', {
+      selectView: playlist,
+      title: 'View the Playlist'
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
 module.exports = {
   create,
   newPlayList,
@@ -144,5 +160,6 @@ module.exports = {
   updatePlaylist,
   addToPlaylist,
   viewPlaylist,
-  removeSong
+  removeSong,
+  songsDetails
 }
