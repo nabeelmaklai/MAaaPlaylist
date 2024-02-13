@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/searchresults.css' />
 
-<% if(searchQuery !== ""){%>
-  <h1>Search results for "<%= searchQuery %>"</h1>
+<% if(songName !== "" || artistName !== ""){%>
+  <h1>Search results for "<%= songName %>"</h1>
   <div class="songs-container">
     <% songs.forEach(song => { %>
       <div id="songs">
@@ -14,7 +14,7 @@
     <% }); %>
 
 </div>
-<%} else {%>
+<%} else if(songName === "" && artistName === "") {%>
   <h1>No Songs Found</h1>
   <%}%>
 

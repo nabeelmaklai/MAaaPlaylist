@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 body {
@@ -56,14 +55,43 @@ nav {
   }
 }
 
-#search-song-input {
-  margin: 0 15%;
+#search-song-input,
+#search-artist-input {
+  margin: 0 auto;
   width: 70%;
-  height: 3vh;
+  height: 1.5vw;
   border-radius: 10px;
   text-align: center;
-  font-size: 1vw;
+  font-size: 0.7vw;
   border-bottom: 3px rgb(0, 17, 255) solid;
+}
+#search-artist-input {
+  width: 40%;
+  margin: 1vh 1.7vh;
+}
+#basic-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#advance {
+  margin: 0 0;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#advanceSearch {
+  width: 1vw;
+}
+input[type='checkbox'] {
+  accent-color: rgb(200, 23, 227);
+}
+#advancelabel {
+  font-size: 1.1vw;
+  padding-left: 4px;
 }
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
@@ -71,7 +99,7 @@ nav {
   margin: 4vh auto;
   --red: #ce0d0d;
   font-size: 1.5vh;
-  padding: 0.9em 2em;
+  padding: 0.9vh 2vh;
   border-radius: 50px;
   transition: all 0.3s;
   border: 2px solid white;

@@ -22,10 +22,14 @@
 <div id="search-song">
     <h2>Search For Songs</h2>
     <form id="search-song-form" action="/songs/songresults" method="POST">
-      <input id="search-song-input" type="text" name="name" placeholder="search songs...">
+      <div id="basic-search">
+        <input id="search-song-input" type="text" name="name" placeholder="Song Name">
+       <div id="advance">
+          <input id="advanceSearch" type="checkbox" name="advanceSearch">
+          <label for="advanceSearch"><span id="advancelabel">Advance Search</span></label>
+       </div>
+      </div>
       <input id="search-artist-input" type="text" name="artist" placeholder="Artist Name">
-      <input id="advanceSearch" type="checkbox" name="advanceSearch">
-      <label for="advanceSearch">Advance Search</label>
       <br><input id="search-song-btn" type="submit" value="Search">
     </form>
     <%- include('./partials/footer') %>
@@ -40,10 +44,12 @@
 <script>
   let checkbox = document.querySelector('#advanceSearch')
   checkbox.addEventListener('change', (e) => {
+    let artistSearch  = document.querySelector('#search-artist-input')
   if (e.currentTarget.checked) {
-    document.querySelector('#search-artist-input').style.display = 'block'
+    artistSearch.style.display = 'block'
   } else {
-    document.querySelector('#search-artist-input').style.display = 'none'
+    artistSearch.style.display = 'none'
+    artistSearch.value = ''
   }
 })
 </script>
