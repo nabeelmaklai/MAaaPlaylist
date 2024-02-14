@@ -40,7 +40,7 @@
 
 This is the landing page with and without user authentication. It includes a search bar to search for songs as well as an advanced search option that allows users to search by artist name. When the user is logged in, the landing page also has the link to view their personal playlists. 
 
-> ![Alt text](!app-images/homepage.png)
+> ![Alt text](app-images/homepage.png)
 
 ##### Song search results 
 
@@ -60,38 +60,25 @@ The song details page includes details on the song and the ability to play a sho
 
 If the user is authenticated, the song details page has the option to add the song to a playlist.
 
-##### Song details with authentication
+##### Creating and viewing the playlists
 
-> ![Alt text](app-images/song-details-loggedin.png)
+The logged in users of the app can view their playlists and create their new playlists if they wish
 
-**The search results**
+> ![Alt text](app-images/your-playlist-button.png)
 
-> ![Alt text](images/wireframe/3-Search-Results.png)
-> The search results will be displayed as horizontally across the page. Users will be able to see the songs’s name as well as its cover
+##### Playlist details
 
-**Song details**
+Loggedin users of the app can view the songs theyve added into their playlists with the option to edit and delete the songs inside the playlist or even teh whole playlist
 
-> ![Alt text](images/wireframe/4-Song-Details.png)
+> ![Alt text](app-images/playlist-details.png)
 
-When users select a certain song, a new page will open. The page will display additional details of the song. The users will then have the opportunity and the option to add the song to a playlist
+##### Public playlists
 
-**All playlists**
+Playlists that users choose to be displayed publically can be viewed by all users of the app
 
-> ![Alt text](images/wireframe/5-Playlists.png)
+> ![Alt text](app-images/Public-playlists.png)
 
-The users will be able to display all their playlists. The playlists will contain the name of the playlist as well as the option to display the details of the playlist
 
-**Playlist details**
-
-> ![Alt text](images/wireframe/6-Playlist-Details.png)
-
-The playlist details will show only the selected playlist and give the user an opportunity to edit and delete the playlist
-
-**Edit playlist details**
-
-> ![Alt text](images/wireframe/7-Edit-Playlist-Details.png)
-
-When the user selects a playlist to edit its details, the playlist details page will give the user the option to update the playlist name and the description.
 
 ## Team
 
