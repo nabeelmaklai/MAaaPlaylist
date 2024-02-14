@@ -14,7 +14,7 @@ The building of the site will be a team effort. The team was composed of:
 - [AbdulRahman](https://github.com/aboodabdo347)
 - [Nabeel](https://github.com/nabeelmaklai)
 
-The developemnt of the app was organized using a Trello board linked below. 
+The development of the app was organized using a Trello board linked below. 
 
 ## link to Trello board and App
 
@@ -46,43 +46,43 @@ The developemnt of the app was organized using a Trello board linked below.
 
 ## App screenshots
 
-##### The landing page
+#### The landing page
 
 This is the landing page with and without user authentication. It includes a search bar to search for songs as well as an advanced search option that allows users to search by artist name. When the user is logged in, the landing page also has the link to view their personal playlists. 
 
 > ![Alt text](app-images/homepage.png)
 
-##### Song search results 
+#### Song search results 
 
 The search results are identical for both authenticated and unauthenticated users.
 
 > ![Alt text](app-images/Search-results.png)
 
-##### Song details without authentication
+#### Song details without authentication
 
 The song details page includes details on the song and the ability to play a short clip of the song in the browser
 
 > ![Alt text](app-images/song-details-not-loggedin.png)
 
-##### Song details with authentication
+#### Song details with authentication
 
 If the user is authenticated, the song details page has the option to add the song to a playlist.
 
 > ![Alt text](app-images/song-details-loggedin.png)
 
-##### Creating and viewing the playlists
+#### Creating and viewing the playlists
 
 The logged in users of the app can view their playlists and create their new playlists if they wish
 
 > ![Alt text](app-images/your-playlist-button.png)
 
-##### Playlist details
+#### Playlist details
 
 Loggedin users of the app can view the songs theyve added into their playlists with the option to edit and delete the songs inside the playlist or even teh whole playlist
 
 > ![Alt text](app-images/playlist-details.png)
 
-##### Public playlists
+#### Public playlists
 
 Playlists that users choose to be displayed publically can be viewed by all users of the app
 
