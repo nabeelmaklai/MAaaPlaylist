@@ -29,6 +29,8 @@ body {
   display: flex;
   justify-content: center;
   justify-content: space-around;
+  margin-bottom: 5%;
+  margin-top: 2%;
 }
 
 .user-container img {
@@ -48,6 +50,7 @@ body {
   font-size: medium;
   flex-direction: column;
   margin-left: 30%;
+  margin-top: 1%;
 }
 .addPlaylist-container label {
   text-align: center;
@@ -55,7 +58,8 @@ body {
 }
 
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
-.add-playlist-btn {
+.add-playlist-btn,
+.listplaylist-btn {
   width: max-content;
   margin: 4vh auto;
   --red: #ce0d0d;
@@ -76,11 +80,15 @@ body {
   box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
     0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
-
+.add-playlist-btn:hover,
+.listplaylist-btn:hover {
+  color: #bf150c;
+  box-shadow: inset 0 0 10px rgba(253, 57, 27, 0.6),
+    0 0 9px 3px rgba(253, 80, 27, 0.2);
+}
 #search-song-form {
   display: flex;
   flex-direction: column;
-
   text-align: start;
   width: 150px;
 }
@@ -94,16 +102,13 @@ body {
 }
 .playlist-container {
   display: flex;
-  /* flex-wrap: wrap; */
+
   flex-direction: row;
   align-items: center;
   width: fit-content;
   justify-content: space-between;
-  /* background-color: #ce0d0d; */
+
   border-radius: 1rem;
-  margin-top: 1.5%;
-  margin-left: 10%;
-  margin-right: 10%;
   max-height: 100%;
 }
 
@@ -169,10 +174,9 @@ h1 {
 }
 .addPlaylist-container-heading {
   display: flex;
-  /* margin-left: 7%; */
-  width: 80%;
+  width: 100%;
   color: white;
-  margin: 5% 18%;
+  margin: 5% auto;
   width: max-content;
   font-size: 5vh;
   color: rgb(255, 255, 255);
@@ -197,44 +201,32 @@ h1 {
 .listplaylist-btn {
   width: max-content;
   margin: 4vh auto;
-  --red: #ce0d0d;
-  font-size: 1.5vh;
-  padding: 0.9em 2em;
-  border-radius: 50px;
-  transition: all 0.3s;
-  border: 2px solid white;
   margin-left: 15%;
-  background: linear-gradient(
-    to right,
-    rgba(253, 148, 27, 0.1) 1%,
-    transparent 40%,
-    transparent 60%,
-    rgba(253, 208, 27, 0.1) 100%
-  );
-  color: white;
-  box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
-    0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
 
 .playlist-deds {
   display: flex;
   align-items: center;
-
-  /* flex-direction: column; */
-  /* flex-direction: column; */
 }
 
 .playlist-container-main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  /* padding: 0 10%; */
-  margin: 0 10%;
+  max-width: 70%;
+  row-gap: 10vh;
+  column-gap: 20vh;
+  margin: 0 auto;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
 }
 
 .playlist-name {
-  margin: 0 30%;
+  margin: 0;
+  min-width: 20vh;
 }
 .playlist-status {
   margin-right: 30%;
