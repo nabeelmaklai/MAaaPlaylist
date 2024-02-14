@@ -1,6 +1,6 @@
 <%- include("../partials/header") %>
 <link rel='stylesheet' href='/stylesheets/view.css' />
-
+<% if(user) {%>
 <div class="page-container">
   <div class="playlist-details">
     <div class="playlist-header">
@@ -28,6 +28,7 @@
         <div class="song-details">
           <div class="song-name"><%= song.title %></div>
           <div class="song-artist"><%= song.artist %></div>
+          <audio controls ><source src="<%= song.songPreview %>" type="audio/mp3"></audio>
         </div>
         <form action="/<%= selectView._id %>/<%= song._id %>?_method=DELETE" method="POST" class="remove-song-form">
           <button type="submit" class="remove-song-button">Remove from Playlist</button>
@@ -36,5 +37,5 @@
     <% }) %>
   </div>
 </div>
-
+<% } %>
 <%- include("../partials/footer") %>

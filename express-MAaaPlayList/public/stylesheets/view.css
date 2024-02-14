@@ -17,7 +17,7 @@ body {
 
 .page-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -26,9 +26,11 @@ body {
   border: 0.1rem solid #fff;
   border-radius: 1rem;
   width: 35%;
+  height: 15%;
   padding: 20px;
   margin-right: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
+    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
 }
 
 .playlist-header {
@@ -59,42 +61,53 @@ body {
 
 .delete-button,
 .update-button {
-  width: max-content;
-  margin: 4vh auto;
+  cursor: pointer;
+  width: 200px;
+  margin: 6vh auto;
   --red: #ce0d0d;
   font-size: 1.5vh;
-  padding: 0.9em 2em;
+  padding: 0.9em 4em;
   border-radius: 50px;
   transition: all 0.3s;
   border: 2px solid white;
-  background: #ce0d0d;
-  color: white;
+  background: white;
+  color: black;
   box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
     0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
 
-.update-button {
-  background: #3498db;
-}
 .songs-container {
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   border: 0.1rem solid #fff;
   border-radius: 1rem;
   width: 60%;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
+    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
 }
 
 .song-item {
-  padding: 20px;
-  margin-bottom: 20px;
+  border: 1px white solid;
+  outline: 3px white solid;
+  outline-offset: -4px;
+  max-height: 15vh;
+  padding: 1px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.song-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 8px;
+}
 .song-cover img {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
+  width: 92px;
+  height: 97px;
+  border: 0.5px rgb(255, 255, 255) solid;
+  border-top-right-radius: 50px;
 }
 
 .song-details {
@@ -102,6 +115,7 @@ body {
 }
 
 .song-name {
+  font-family: 'Teko', sans-serif;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
@@ -110,6 +124,7 @@ body {
 }
 
 .song-artist {
+  font-style: italic;
   font-size: 16px;
   color: #d4cccc;
 }
@@ -120,21 +135,53 @@ body {
 
 .remove-song-button {
   padding: 10px 20px;
-  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: 2px solid white;
   background: #e74c3c;
   color: white;
   cursor: pointer;
 }
-
+.delete-button:hover {
+  color: white;
+  background-color: red;
+}
+.update-button:hover {
+  color: white;
+  background-color: blue;
+}
+.remove-song-button:hover {
+  color: white;
+  background-color: red;
+}
 .delete-button:hover,
 .update-button:hover,
 .remove-song-button:hover {
   opacity: 0.9;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
 
-.playlist-details,
-.songs-container {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 20px;
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 241, 249);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0e4f1;
+}
+audio {
+  background-color: white;
+  width: 40vh;
+  height: 25px;
+  border-bottom: 1px white solid;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
 }
