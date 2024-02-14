@@ -58,21 +58,23 @@ h1 {
   column-gap: 100px;
 }
 #song-image {
-  width: 10vh;
-  height: 10vh;
-  border: 3px white solid;
+  width: 89px;
+  height: 91px;
+  border: 1px white solid;
 }
 #song-container {
   display: flex;
   border: 1px white solid;
   outline: 3px white solid;
   outline-offset: -4px;
-  width: 40vh;
+  width: 50vh;
+  max-height: 15vh;
   background-color: rgba(0, 0, 0, 0.608);
+  overflow: hidden;
 }
 #playlists,
 #all-songs {
-  height: 40vh;
+  height: 50vh;
 }
 #all-songs {
   overflow: auto;
@@ -87,24 +89,27 @@ h1 {
   font-style: italic;
 }
 #artist-name-container {
-  margin: 0% 5% 9% 5%;
+  margin: 0% 5px 20px 5px;
   padding: 0;
   font-size: 1.2vh;
 }
 #playlists h4 {
-  font-size: 1.8vh;
+  color: rgb(255, 255, 255);
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  font-size: 2vh;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  background-color: white;
-  color: rgb(4, 11, 100);
   margin: 0;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  padding: 1%;
+  padding: 5%;
 }
 audio {
   background-color: white;
-  width: 29.5vh;
+  /* width: 28.5vh; */
+  width: 40vh;
   height: 25px;
   border-bottom: 1px white solid;
 }
