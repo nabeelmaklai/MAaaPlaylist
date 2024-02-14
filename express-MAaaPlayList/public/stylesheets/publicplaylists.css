@@ -1,10 +1,119 @@
+h1 {
+  color: white;
+  margin: 2% auto;
+  width: max-content;
+  font-size: 5vh;
+  color: rgb(255, 255, 255);
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  animation: pulsate 1.7s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 3px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0033ab,
+      0 0 80px #0033ab;
+  }
+
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0033ab,
+      0 0 45px #0033ab, 0 0 55px #0033ab;
+  }
+  100% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab;
+  }
+  0% {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+      0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab,
+      0 0 3rem #0033ab, inset 0 0 3.5rem #0033ab;
+  }
+}
+
+#all-songs::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+#all-songs::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#all-songs::-webkit-scrollbar-thumb {
+  background: #96a2dc;
+}
+
+#all-songs::-webkit-scrollbar-thumb:hover {
+  background: #272949;
+}
 #playlist-container {
-  margin: 10% 6%;
+  margin: 2% 6%;
   display: flex;
   flex-direction: row;
   column-gap: 100px;
 }
 #song-image {
-  width: 7vh;
-  height: 7vh;
+  width: 89px;
+  height: 91px;
+  border: 1px white solid;
+}
+#song-container {
+  display: flex;
+  border: 1px white solid;
+  outline: 3px white solid;
+  outline-offset: -4px;
+  width: 50vh;
+  max-height: 15vh;
+  background-color: rgba(0, 0, 0, 0.608);
+  overflow: hidden;
+}
+#playlists,
+#all-songs {
+  height: 50vh;
+}
+#all-songs {
+  overflow: auto;
+}
+#song-title {
+  font-weight: 550;
+  font-size: 1.4vh;
+  font-family: 'Teko', sans-serif;
+  margin: 7% 5% 0% 5%;
+}
+#artist-name {
+  font-style: italic;
+}
+#artist-name-container {
+  margin: 0% 5px 20px 5px;
+  padding: 0;
+  font-size: 1.2vh;
+}
+#playlists h4 {
+  color: rgb(255, 255, 255);
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  font-size: 2vh;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 5%;
+}
+audio {
+  background-color: white;
+  /* width: 28.5vh; */
+  width: 40vh;
+  height: 25px;
+  border-bottom: 1px white solid;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
 }

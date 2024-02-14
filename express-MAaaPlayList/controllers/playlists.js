@@ -159,14 +159,6 @@ const publicPlaylistIndex = async (req, res) => {
     const publicPlaylists = await Playlists.find({ public: true }).populate(
       'songs'
     )
-    publicPlaylists.forEach((playlist) => {
-      console.log(playlist.songs)
-      playlist.songs.forEach((song) => {
-        console.log(song.title)
-        console.log(song.artist)
-        console.log(song.cover)
-      })
-    })
     res.render('../views/playlists/publicPlaylists', {
       title: 'Public Playlists',
       publicPlaylists
