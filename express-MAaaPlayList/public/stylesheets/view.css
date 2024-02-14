@@ -88,18 +88,26 @@ body {
 }
 
 .song-item {
-  padding: 20px;
-  margin-bottom: 20px;
+  border: 1px white solid;
+  outline: 3px white solid;
+  outline-offset: -4px;
+  max-height: 15vh;
+  padding: 1px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.song-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 8px;
+}
 .song-cover img {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
+  width: 92px;
+  height: 97px;
+  border: 0.5px rgb(255, 255, 255) solid;
+  border-top-right-radius: 50px;
 }
 
 .song-details {
@@ -107,6 +115,7 @@ body {
 }
 
 .song-name {
+  font-family: 'Teko', sans-serif;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
@@ -115,6 +124,7 @@ body {
 }
 
 .song-artist {
+  font-style: italic;
   font-size: 16px;
   color: #d4cccc;
 }
@@ -164,4 +174,14 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e0e4f1;
+}
+audio {
+  background-color: white;
+  width: 40vh;
+  height: 25px;
+  border-bottom: 1px white solid;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #ffffff;
 }
