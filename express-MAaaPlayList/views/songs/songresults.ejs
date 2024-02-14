@@ -6,7 +6,10 @@
   <div class="songs-container">
     <% songs.forEach(song => { %>
       <div id="songs">
-      <h3><%= song.title %></h3>
+      <div id="song-details-heading">
+        <h3><%= song.title %></h3>
+        <h2>by <%= song.artist.name %></h3>
+      </div>
       <img id="cover" src="<%= song.album.cover_big %>">
       <br>
       <a href="/songs/<%=song.id%>">Details</a> 

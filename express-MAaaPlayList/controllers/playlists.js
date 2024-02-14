@@ -5,7 +5,6 @@ const axios = require('axios')
 const User = require('../models/user')
 
 const create = (req, res) => {
-  // res.render('../views/playlists/playlists', { title: 'playlists' })
   res.redirect('/new')
 }
 
@@ -55,16 +54,16 @@ const deletePlaylist = async (req, res) => {
 }
 const showUpdate = async (req, res) => {
   let select
-    try {
-      select = await Playlists.findById(req.params.id)
-    } catch (error) {
-      console.log(error)
-    }
-    res.render('playlists/editplaylist', {
-      title: 'Updating the playlist',
-      select
-    })
+  try {
+    select = await Playlists.findById(req.params.id)
+  } catch (error) {
+    console.log(error)
   }
+  res.render('playlists/editplaylist', {
+    title: 'Updating the playlist',
+    select
+  })
+}
 
 const updatePlaylist = async (req, res) => {
   req.body.public = !!req.body.public
@@ -107,15 +106,14 @@ const addToPlaylist = async (req, res) => {
 
         if (!playList.songs.some((s) => s._id.equals(song._id))) {
           playList.songs.push(song)
-
           await playList.save()
+          res.redirect(`/view/${playList._id}`)
         }
       }
     })
   } catch (error) {
     console.log('error in adding song to playlist ' + error)
   }
-  res.redirect('/')
 }
 const viewPlaylist = async (req, res) => {
   let selectView

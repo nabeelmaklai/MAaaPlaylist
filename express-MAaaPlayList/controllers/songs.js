@@ -1,5 +1,5 @@
 const Song = require('../models/song')
-const API_URL = 'https://api.deezer.com/search?q='
+const API_URL = 'https://api.deezer.com/search?q=track:'
 const API_TRACK_URL = 'https://api.deezer.com/track/'
 const axios = require('axios')
 const Playlist = require('../models/playlist')
@@ -7,10 +7,9 @@ const User = require('../models/user')
 
 const show = async (req, res) => {
   try {
-    console.log(req.body)
     let response
     if (req.body.artist === '') {
-      response = await axios.get(API_URL + req.body.name)
+      response = await axios.get(API_URL + `"${req.body.name}"`)
     } else if (req.body.artist !== '' && req.body.name !== '') {
       response = await axios.get(
         `https://api.deezer.com/search?q=artist:"${req.body.artist}" track:"${req.body.name}"`

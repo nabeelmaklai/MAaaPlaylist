@@ -61,8 +61,9 @@ nav {
   border-bottom: 3px rgb(0, 17, 255) solid;
 }
 #search-artist-input {
+  margin: 0;
   width: 50%;
-  margin: 0 auto;
+  margin-left: 1%;
 }
 #basic-search {
   display: flex;
@@ -80,14 +81,14 @@ nav {
 }
 
 input[type='checkbox'] {
-  accent-color: rgb(200, 23, 227);
+  accent-color: rgb(232, 157, 199);
   transform: scale(1.5);
   margin-right: 15px;
 }
 #advancelabel {
-  font-size: 1.3vw;
-  padding-left: 4px;
-  font-family: 'Teko', sans-serif;
+  font-size: 1vw;
+  font-family: 'Comfortaa', sans-serif;
+  color: rgb(232, 157, 199);
 }
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 #search-song-btn {
