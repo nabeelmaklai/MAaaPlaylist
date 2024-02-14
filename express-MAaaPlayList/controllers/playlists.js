@@ -36,7 +36,7 @@ const playlistIndex = async (req, res) => {
       userDetails
     })
   } catch (error) {
-    console.log(error)
+    res.redirect('/')
   }
 }
 
@@ -55,16 +55,17 @@ const deletePlaylist = async (req, res) => {
 }
 const showUpdate = async (req, res) => {
   let select
-  try {
-    select = await Playlists.findById(req.params.id)
-  } catch (error) {
-    console.log(error)
+    try {
+      select = await Playlists.findById(req.params.id)
+    } catch (error) {
+      console.log(error)
+    }
+    res.render('playlists/editplaylist', {
+      title: 'Updating the playlist',
+      select
+    })
   }
-  res.render('playlists/editplaylist', {
-    title: 'Updating the playlist',
-    select
-  })
-}
+
 const updatePlaylist = async (req, res) => {
   req.body.public = !!req.body.public
   try {

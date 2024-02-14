@@ -45,9 +45,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-size: medium;
+  flex-direction: column;
+  margin-left: 30%;
 }
 .addPlaylist-container label {
   text-align: center;
+  width: 155%;
 }
 
 .playlist-container {
@@ -79,7 +82,10 @@ body {
 #search-song-form {
   display: flex;
   flex-direction: column;
-  text-align: center;
+
+  text-align: start;
+  width: 150px;
+
 }
 .description-box {
   height: 100%;
@@ -109,13 +115,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7%;
+  margin-top: 3%;
   border-radius: 1rem;
   width: 35%;
   height: 25vw;
-  margin-left: 33vw;
-  /* margin-right: 50mv; */
-  padding-top: 0.1%;
+  margin-left: 33%;
+  margin-bottom: 90%;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
     0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
 }
@@ -124,13 +129,11 @@ body {
   flex-direction: column;
   align-items: center;
   width: 85%;
-  /* height: 10%; */
+  height: 10%;
   font-weight: bold;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
   padding-top: 5%;
   padding-bottom: 1%;
-  /* align-content: center; */
-  /* justify-content: center; */
 }
 
 .edit-text-box {
@@ -144,11 +147,28 @@ body {
 }
 
 .addplaylist-text-box {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   height: 1.5vw;
   width: 155%;
   border-radius: 10vw;
   text-align: center;
   font-size: 0.7vw;
+  width: 155%;
   border-bottom: 3px rgb(129, 135, 227) solid;
+}
+h1 {
+  color: white;
+  margin: 2% 44%;
+  width: max-content;
+  font-size: 5vh;
+  color: rgb(255, 255, 255);
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  animation: pulsate 1.7s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
 }
