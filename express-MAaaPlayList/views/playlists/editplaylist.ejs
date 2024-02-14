@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/playlists.css' />
-<% if(user) {%>
 
+<% if(user) {%>
+<h1>Edit Playlist</h1>
 <div class="edit-playlist"> 
-  <h3>Edit Playlist</h3>
   <form action="/<%= select._id %>?_method=PUT" method="POST">
     <label>Name</label>
     <input class="edit-text-box" type="text"name="name" value="<%= select.name%>">
