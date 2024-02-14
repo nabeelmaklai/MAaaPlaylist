@@ -85,7 +85,7 @@ audio::-webkit-media-controls-panel {
   margin-top: 4%;
   margin-bottom: 2%;
   --red: #ce0d0d;
-  font-size: 1.7vh;
+  font-size: 2vh;
   padding: 0.5vh 1.6vh;
   border-radius: 50px;
   transition: all 0.3s;
@@ -108,6 +108,7 @@ audio::-webkit-media-controls-panel {
     0 0 9px 3px rgba(253, 80, 27, 0.2);
 }
 #add-playlist-container h2 {
+  padding-top: 2%;
   font-size: 3vh;
   margin: 0 auto;
   min-width: 60vh;

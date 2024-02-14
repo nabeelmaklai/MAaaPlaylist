@@ -16,9 +16,10 @@
     </div>
     <audio controls ><source src="<%= songdetails.preview %>" type="audio/mp3"></audio>
   </div>
-  <div id="add-playlist-container">
+
     <% if (user) { %>
-      <br><br><h2>Add to playlist</h2>
+      <div id="add-playlist-container">
+      <h2>Add to Playlist</h2>
       <form id="add-playlist-form" method="POST"
       action="/songs/<%= songdetails.id %>/addToPlayList">
         <select id="add-to-playlist" name="addToPlaylist" required>
@@ -26,7 +27,7 @@
             <option value="<%= playlist._id %>"><%= playlist.name %></option> 
           <% }); %>
         </select>
-        <input id="add-btn" type="submit" value="Add To Playlist">
+        <input id="add-btn" type="submit" value="Add">
       </form>
       <% }  %>
   </div>
