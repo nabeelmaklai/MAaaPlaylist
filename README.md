@@ -46,7 +46,7 @@ This is the landing page with and without user authentication. It includes a sea
 
 The search results are identical for both authenticated and unauthenticated users.
 
-> ![Alt text](app-images/Search-results.png)
+> ![Alt text](app-images/Search-results.png!)
 
 ##### Song details without authentication
 
