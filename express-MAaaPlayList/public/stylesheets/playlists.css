@@ -42,6 +42,7 @@ body {
   min-width: max-content;
   font-size: 1vw;
   display: flex;
+  margin-right: 10%;
   align-items: center;
   flex-wrap: wrap;
   font-size: medium;
@@ -53,10 +54,6 @@ body {
   width: 155%;
 }
 
-.playlist-container {
-  display: flex;
-  flex-direction: column;
-}
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 .add-playlist-btn {
   width: max-content;
@@ -67,6 +64,7 @@ body {
   border-radius: 50px;
   transition: all 0.3s;
   border: 2px solid white;
+  margin-left: 50%;
   background: linear-gradient(
     to right,
     rgba(253, 148, 27, 0.1) 1%,
@@ -85,7 +83,6 @@ body {
 
   text-align: start;
   width: 150px;
-
 }
 .description-box {
   height: 100%;
@@ -97,18 +94,17 @@ body {
 }
 .playlist-container {
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
+  width: fit-content;
+  justify-content: space-between;
+  /* background-color: #ce0d0d; */
   border-radius: 1rem;
-  margin-top: 5%;
-  margin-left: 3%;
-  margin-right: 3%;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
-    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
-  max-height: 100px;
-
-  overflow-y: auto;
+  margin-top: 1.5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-height: 100%;
 }
 
 .edit-playlist {
@@ -147,7 +143,6 @@ body {
 }
 
 .addplaylist-text-box {
-  /* margin: 0 auto; */
   height: 1.5vw;
   width: 155%;
   border-radius: 10vw;
@@ -171,4 +166,76 @@ h1 {
   padding: 0.4em;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
     0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
+}
+.addPlaylist-container-heading {
+  display: flex;
+  /* margin-left: 7%; */
+  width: 80%;
+  color: white;
+  margin: 5% 18%;
+  width: max-content;
+  font-size: 5vh;
+  color: rgb(255, 255, 255);
+  font-family: 'Caveat', cursive;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
+    0 0 82px #0033ab;
+  animation: pulsate 1.7s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.8em;
+  margin-bottom: 20%;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  padding-left: 50%;
+}
+
+.listplaylist-btn {
+  width: max-content;
+  margin: 4vh auto;
+  --red: #ce0d0d;
+  font-size: 1.5vh;
+  padding: 0.9em 2em;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: 2px solid white;
+  margin-left: 15%;
+  background: linear-gradient(
+    to right,
+    rgba(253, 148, 27, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(253, 208, 27, 0.1) 100%
+  );
+  color: white;
+  box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
+    0 0 9px 3px rgba(221, 31, 14, 0.1);
+}
+
+.playlist-deds {
+  display: flex;
+  align-items: center;
+
+  /* flex-direction: column; */
+  /* flex-direction: column; */
+}
+
+.playlist-container-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 0 10%; */
+  margin: 0 10%;
+}
+
+.playlist-name {
+  margin: 0 30%;
+}
+.playlist-status {
+  margin-right: 30%;
 }
