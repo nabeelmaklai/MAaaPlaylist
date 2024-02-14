@@ -34,7 +34,7 @@
 
 > The wireframe of the conceptualized site are detailed below. The landing page will be a search bar with a navigation bar on the top which will have the Google Oauth login link and a link to display all the playlists. The specific pages of the site is detailed below.
 
-**The landing page without user authentication**
+## **The landing page without user authentication**
 
 > ![Alt text](images/wireframe/1-Home-Page-not-logged-in.png)
 
