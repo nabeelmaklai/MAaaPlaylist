@@ -40,13 +40,13 @@
 
 This is the landing page with and without user authentication. It includes a search bar to search for songs as well as an advanced search option that allows users to search by artist name. When the user is logged in, the landing page also has the link to view their personal playlists. 
 
-> ![Alt text](app-images/homepage.png)
+> ![Alt text](!app-images/homepage.png)
 
 ##### Song search results 
 
 The search results are identical for both authenticated and unauthenticated users.
 
-> ![Alt text](app-images/Search-results.png!)
+> ![Alt text](app-images/Search-results.png)
 
 ##### Song details without authentication
 
