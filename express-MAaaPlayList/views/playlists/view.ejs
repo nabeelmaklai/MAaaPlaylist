@@ -1,6 +1,6 @@
 <%- include("../partials/header") %>
 <link rel='stylesheet' href='/stylesheets/view.css' />
-
+<% if(user) {%>
 <div class="page-container">
   <div class="playlist-details">
     <div class="playlist-header">
@@ -36,5 +36,5 @@
     <% }) %>
   </div>
 </div>
-
+<% } %>
 <%- include("../partials/footer") %>

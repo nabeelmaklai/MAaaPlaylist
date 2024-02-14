@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/playlists.css' />
-
+<% if(user) {%>
 
 <div class="edit-playlist"> 
   <h3>Edit Playlist</h3>
@@ -16,4 +16,5 @@
     <button class="add-playlist-btn" type="submit">Update playlist</button>
   </form>
 </div>
+<% } %>
 <%- include("../partials/footer") %>

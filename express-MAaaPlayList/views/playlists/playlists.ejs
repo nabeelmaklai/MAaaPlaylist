@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/playlists.css' />
-
+<% if (user) { %>
 <div class="playlist-user-container">
   <div class="user-container">
     <img src="<%=user.avatar%>">
@@ -36,5 +36,6 @@
     <br>
     <% }); %>
 </div>
+<% } %>
 <%- include('../partials/footer') %>
 
