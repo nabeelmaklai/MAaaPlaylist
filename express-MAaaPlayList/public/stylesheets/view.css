@@ -195,3 +195,6 @@ audio::-webkit-media-controls-panel {
 .num {
   opacity: 0.8;
 }
+a:visited {
+  color: white;
+}
