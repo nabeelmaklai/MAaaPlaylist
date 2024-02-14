@@ -41,55 +41,70 @@ h1 {
 }
 
 #all-songs::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f100;
+  border-radius: 50px;
 }
 
 #all-songs::-webkit-scrollbar-thumb {
-  background: #96a2dc;
+  background: #d24fc1;
+  border-radius: 50px;
 }
 
 #all-songs::-webkit-scrollbar-thumb:hover {
-  background: #272949;
+  background: #a51e00;
+  border-radius: 50px;
 }
 #playlist-container {
-  margin: 2% 6%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   column-gap: 100px;
+  flex-wrap: wrap;
+  row-gap: 150px;
+  max-width: 70%;
 }
 #song-image {
-  width: 89px;
-  height: 91px;
-  border: 1px white solid;
+  width: 92px;
+  height: 97px;
+  border: 0.5px rgb(255, 255, 255) solid;
+  border-top-right-radius: 50px;
 }
+
 #song-container {
   display: flex;
   border: 1px white solid;
   outline: 3px white solid;
   outline-offset: -4px;
-  width: 50vh;
+  width: 60vh;
   max-height: 15vh;
   background-color: rgba(0, 0, 0, 0.608);
   overflow: hidden;
 }
+#song-container:first-child {
+  border-top-left-radius: 27px;
+  border-top-right-radius: 20px;
+}
 #playlists,
 #all-songs {
-  height: 50vh;
+  height: 60vh;
 }
 #all-songs {
   overflow: auto;
+  border-radius: 38px;
+  border-top: 3px white solid;
 }
 #song-title {
   font-weight: 550;
-  font-size: 1.4vh;
+  font-size: 1.9vh;
   font-family: 'Teko', sans-serif;
-  margin: 7% 5% 0% 5%;
+  margin: 14px 10px 0px 10px;
 }
 #artist-name {
   font-style: italic;
+  font-size: 1.5vh;
 }
 #artist-name-container {
-  margin: 0% 5px 20px 5px;
+  margin: 0px 10px 25px 10px;
   padding: 0;
   font-size: 1.2vh;
 }
@@ -98,7 +113,7 @@ h1 {
   font-family: 'Caveat', cursive;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0033ab,
     0 0 82px #0033ab;
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   margin: 0;
@@ -108,8 +123,7 @@ h1 {
 }
 audio {
   background-color: white;
-  /* width: 28.5vh; */
-  width: 40vh;
+  width: 50vh;
   height: 25px;
   border-bottom: 1px white solid;
 }

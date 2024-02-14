@@ -39,10 +39,9 @@ body {
 }
 
 .addPlaylist-container {
-  width: 40%;
+  min-width: max-content;
   font-size: 1vw;
   display: flex;
-  justify-content: end;
   align-items: center;
   flex-wrap: wrap;
   font-size: medium;
@@ -80,6 +79,7 @@ body {
 #search-song-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .description-box {
   height: 100%;
@@ -146,6 +146,7 @@ body {
 .addplaylist-text-box {
   margin: 0 auto;
   height: 1.5vw;
+  width: 155%;
   border-radius: 10vw;
   text-align: center;
   font-size: 0.7vw;
