@@ -36,7 +36,7 @@
 
 ## App screenshots
 
-### The landing page without user authentication**
+##### The landing page without user authentication**
 
 > ![Alt text](app-images/homepage.png)
 
