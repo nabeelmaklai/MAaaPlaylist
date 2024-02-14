@@ -107,6 +107,7 @@ const addToPlaylist = async (req, res) => {
         if (!playList.songs.some((s) => s._id.equals(song._id))) {
           playList.songs.push(song)
 
+
           await playList.save()
         }
       }
