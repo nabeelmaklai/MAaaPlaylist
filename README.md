@@ -33,20 +33,17 @@ The development of the app was organized using a Trello board linked below.
 **Playlists**
 
 - The site users can create multiple playlists to organize their favorite songs
-- Each playlist has a name and a description to give context to its content.
+- Each playlist has a name and a description to give context to its content as well as the option to make the playlist public.
 - Users can add songs to their playlists. The songs attribute in the Playlist entity stores references (ObjectIds) to the songs included in the playlist.
 
 **Songs**
 
-- Each song has a name, genre, artist(s), release year, and cover art.
-- Genres and artists are stored as arrays of strings, allowing a song to be associated with multiple genres and artists if necessary.
+- Each song has various details such as name, duration, artist(s), release date, song preview and cover art.
 - The cover attribute stores a URL or file path pointing to the cover art for the song.
-
-> The wireframe of the conceptualized site are detailed below. The landing page will be a search bar with a navigation bar on the top which will have the Google Oauth login link and a link to display all the playlists. The specific pages of the site is detailed below.
 
 ## App screenshots
 
-#### The landing page
+#### **The landing page**
 
 This is the landing page with and without user authentication. It includes a search bar to search for songs as well as an advanced search option that allows users to search by artist name. When the user is logged in, the landing page also has the link to view their personal playlists. 
 
