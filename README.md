@@ -6,6 +6,14 @@
 ## Naming the app
 > The app's name was conceived as a playful pun, incorporating the goat as an inspirational animal and featuring it in the app's logo. The "MAaa" segment of the name represents the characteristic call of a goat, resembling the sound "my" as well. Thus, instead of "my playlist," the "my" is humorously replaced with "MAaa," resulting in the name MAaaplaylist.
 
+## Team
+
+The building of the site will be a team effort. The team was composed of:
+
+- [Mariam](https://github.com/MariamBaloch)
+- [AbdulRahman](https://github.com/aboodabdo347)
+* [Nabeel](https://github.com/nabeelmaklai)
+
 ## link to Trello board and App
 
 [MAaaplaylist](https://maaaplaylist.fly.dev/) | [Trello](https://trello.com/b/nfH5tSJv/playlist-app)
@@ -50,15 +58,15 @@ The search results are identical for both authenticated and unauthenticated user
 
 ##### Song details without authentication
 
-> ![Alt text](app-images/song-details-not-loggedin.png)
-
 The song details page includes details on the song and the ability to play a short clip of the song in the browser
+
+> ![Alt text](app-images/song-details-not-loggedin.png)
 
 ##### Song details with authentication
 
-> ![Alt text](app-images/song-details-loggedin.png)
-
 If the user is authenticated, the song details page has the option to add the song to a playlist.
+
+> ![Alt text](app-images/song-details-loggedin.png)
 
 ##### Creating and viewing the playlists
 
@@ -80,13 +88,7 @@ Playlists that users choose to be displayed publically can be viewed by all user
 
 
 
-## Team
 
-The building of the site will be a team effort. The team was composed of:
-
-- [Mariam](https://github.com/MariamBaloch)
-- [AbdulRahman](https://github.com/aboodabdo347)
-* [Nabeel](https://github.com/nabeelmaklai)
 
 The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
 
