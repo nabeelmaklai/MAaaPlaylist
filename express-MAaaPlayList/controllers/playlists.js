@@ -107,7 +107,6 @@ const addToPlaylist = async (req, res) => {
         if (!playList.songs.some((s) => s._id.equals(song._id))) {
           playList.songs.push(song)
 
-
           await playList.save()
         }
       }
@@ -126,7 +125,7 @@ const viewPlaylist = async (req, res) => {
   }
   res.render('playlists/view', {
     title: 'View the Playlist',
-    selectView
+    selectViewz
   })
 }
 
