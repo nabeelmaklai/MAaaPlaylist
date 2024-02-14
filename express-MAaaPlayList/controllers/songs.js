@@ -33,14 +33,21 @@ const show = async (req, res) => {
 
 const details = async (req, res) => {
   const songdetails = await axios.get(API_TRACK_URL + req.params.id)
-  const userID = req.user._id
-  const currentUser = await User.findById(userID).populate('playlists')
-  const playlist = await currentUser.playlists
-  res.render('songs/songdetails', {
-    title: 'Details',
-    songdetails: songdetails.data,
-    playlist
-  })
+  if (req.user !== undefined) {
+    const userID = req.user._id
+    const currentUser = await User.findById(userID).populate('playlists')
+    const playlist = currentUser.playlists
+    res.render('songs/songdetails', {
+      title: 'Details',
+      songdetails: songdetails.data,
+      playlist
+    })
+  } else {
+    res.render('songs/songdetails', {
+      title: 'Details',
+      songdetails: songdetails.data
+    })
+  }
 }
 
 module.exports = {
