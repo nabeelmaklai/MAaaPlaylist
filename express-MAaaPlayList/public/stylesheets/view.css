@@ -11,7 +11,7 @@ form {
 }
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background-image: url('https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png');
   line-height: 1.6;
 }
 
@@ -23,8 +23,9 @@ body {
   margin: 0 auto;
 }
 .playlist-details {
+  border: 0.1rem solid #fff;
+  border-radius: 1rem;
   width: 35%;
-  background: #fff;
   padding: 20px;
   margin-right: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,18 +37,18 @@ body {
 
 .playlist-name {
   font-size: 24px;
-  color: #333;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .playlist-description p {
   font-size: 16px;
-  color: #666;
+  color: #fff;
 }
 
 .playlist-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -58,23 +59,30 @@ body {
 
 .delete-button,
 .update-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background: #e74c3c;
+  width: max-content;
+  margin: 4vh auto;
+  --red: #ce0d0d;
+  font-size: 1.5vh;
+  padding: 0.9em 2em;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: 2px solid white;
+  background: #ce0d0d;
   color: white;
-  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(209, 33, 106, 0.4),
+    0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
 
 .update-button {
   background: #3498db;
 }
 .songs-container {
+  border: 0.1rem solid #fff;
+  border-radius: 1rem;
   width: 60%;
 }
 
 .song-item {
-  background: #fff;
   padding: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -95,7 +103,7 @@ body {
 
 .song-name {
   font-size: 20px;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   margin-bottom: 5px;
   display: block;
@@ -103,7 +111,7 @@ body {
 
 .song-artist {
   font-size: 16px;
-  color: #666;
+  color: #d4cccc;
 }
 
 .remove-song-form {
