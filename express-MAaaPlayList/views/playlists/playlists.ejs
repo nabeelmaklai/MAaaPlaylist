@@ -10,32 +10,42 @@
 
   <div class="addPlaylist-container">
     <form id="search-song-form"  action="/new" method="POST">
-      <h3>Add a Playlist</h3>
+      <h3 class="addPlaylist-container-heading">Add a Playlist</h3>
       <label>Name</label>
       <input class="addplaylist-text-box" type="text" name="name">
       <br>
       <label>Description</label>
       <input class="addplaylist-text-box" type="text" name="description">
       <br>
-      <label>Public</label>
-      <input type="checkbox" name="public"> 
+      <div class="checkbox-container"> 
+        <input type="checkbox" name="public"> 
+      <label class="addplaylist-checkbox">Public</label>
+    </div>
       <input  class="add-playlist-btn" type="submit" value="Add Playlist">
       </form>
     </div>
   
 </div>
 
-<div class="playlist-container">
+<div class="playlist-container-main">
 <% allPlayLists.forEach(playlist => { %>
-    <h4><%= playlist.name %></h4>
-    <p><%= playlist.description %></p>
+<div class="playlist-container">
+  <div class="playlist-name"> 
+    <h4> Playlist Name</h4>
+    <p><%= playlist.name %></p>
+  </div>
+  <div class="playlist-status">
+    <h4>Status</h4>
     <p><%= playlist.public? 'Public':'Private' %></p>
+  </div>
     <form action="/view/<%= playlist._id %>" method="GET">
-      <button class="add-playlist-btn" type="submit">View</button>
+      <button class="listplaylist-btn" type="submit">View</button>
     </form>
+    </div>
     <br>
     <% }); %>
 </div>
 <% } %>
+</div>
 <%- include('../partials/footer') %>
 
