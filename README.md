@@ -12,7 +12,9 @@ The building of the site will be a team effort. The team was composed of:
 
 - [Mariam](https://github.com/MariamBaloch)
 - [AbdulRahman](https://github.com/aboodabdo347)
-* [Nabeel](https://github.com/nabeelmaklai)
+- [Nabeel](https://github.com/nabeelmaklai)
+
+The developemnt of the app was organized using a Trello board linked below. 
 
 ## link to Trello board and App
 
