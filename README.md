@@ -36,18 +36,33 @@
 
 ## App screenshots
 
-##### The landing page without user authentication**
+##### The landing page
+
+This is the landing page with and without user authentication. It includes a search bar to search for songs as well as an advanced search option that allows users to search by artist name. When the user is logged in, the landing page also has the link to view their personal playlists. 
 
 > ![Alt text](app-images/homepage.png)
 
+##### Song search results 
 
-The landing page after the user logs in will have a search bar that users can use to browse the available songs.
+The search results are identical for both authenticated and unauthenticated users.
 
-**The landing page with user authentication**
+> ![Alt text](app-images/Search-results.png)
 
-> ![Alt text](images/wireframe/2-Home-Page-logged-in.png)
+##### Song details without authentication
 
-The landing page after the user logs in will have a search bar that users can use to browse the available songs.
+> ![Alt text](app-images/song-details-not-loggedin.png)
+
+The song details page includes details on the song and the ability to play a short clip of the song in the browser
+
+##### Song details with authentication
+
+> ![Alt text](app-images/song-details-loggedin.png)
+
+If the user is authenticated, the song details page has the option to add the song to a playlist.
+
+##### Song details with authentication
+
+> ![Alt text](app-images/song-details-loggedin.png)
 
 **The search results**
 
