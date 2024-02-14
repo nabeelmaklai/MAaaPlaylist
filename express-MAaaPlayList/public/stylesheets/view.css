@@ -51,7 +51,8 @@ body {
 .playlist-actions {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: -5%;
+  margin-bottom: -10%;
 }
 
 .delete-form,
@@ -106,6 +107,7 @@ body {
 .song-cover img {
   width: 92px;
   height: 97px;
+  margin-bottom: -5px;
   border: 0.5px rgb(255, 255, 255) solid;
   border-top-right-radius: 50px;
 }
@@ -131,16 +133,20 @@ body {
 
 .remove-song-form {
   flex-basis: 25%;
+  margin-bottom: -9%;
 }
 
 .remove-song-button {
   padding: 10px 20px;
-  border-radius: 50px;
   transition: all 0.3s;
   border: 2px solid white;
   background: #e74c3c;
   color: white;
   cursor: pointer;
+}
+.remove-song-button {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .delete-button:hover {
   color: white;
@@ -160,7 +166,7 @@ body {
   opacity: 0.9;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -180,8 +186,12 @@ audio {
   width: 40vh;
   height: 25px;
   border-bottom: 1px white solid;
+  margin-bottom: -12px;
 }
 
 audio::-webkit-media-controls-panel {
   background-color: #ffffff;
+}
+.num {
+  opacity: 0.8;
 }
