@@ -4,6 +4,7 @@
 <h1>Public Playlists</h1>
 <div id="playlist-container">
 <% publicPlaylists.forEach(playlist => { %>
+  <%if(playlist.songs.length>0){%>
 <div id="playlists">
     <h4><%= playlist.name %></h4>
 <div id="all-songs">
@@ -16,9 +17,11 @@
             <audio controls ><source src="<%= song.songPreview %>" type="audio/mp3"></audio>
           </div>
         </div>
+      
       <% })%>
 </div>
   </div>
+  <% }%>
   <% }); %>
 </div>
 

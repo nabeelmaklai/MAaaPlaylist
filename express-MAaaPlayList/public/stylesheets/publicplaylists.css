@@ -89,9 +89,12 @@ h1 {
   height: 60vh;
 }
 #all-songs {
+  padding-right: 1px;
   overflow: auto;
   border-radius: 38px;
   border-top: 3px white solid;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #0033ab,
+    0 0 0.8rem #0033ab, 0 0 2.8rem #0033ab, inset 0 0 1.3rem #0033ab;
 }
 #song-title {
   font-weight: 550;
