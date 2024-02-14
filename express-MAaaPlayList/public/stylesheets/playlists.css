@@ -104,3 +104,50 @@ body {
 
   overflow-y: auto;
 }
+
+.edit-playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  border-radius: 1rem;
+  width: 35%;
+  height: 25vw;
+  margin-left: 33vw;
+  /* margin-right: 50mv; */
+  padding-top: 0.1%;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #002487,
+    0 0 0.8rem #002487, 0 0 2.8rem #002487, inset 0 0 1.3rem #002487;
+}
+.edit-playlist form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  /* height: 10%; */
+  font-weight: bold;
+  margin-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+
+.edit-text-box {
+  margin: 0 auto;
+  width: 70%;
+  height: 1.5vw;
+  border-radius: 10vw;
+  text-align: center;
+  font-size: 0.7vw;
+  border-bottom: 3px rgb(0, 17, 255) solid;
+}
+
+.addplaylist-text-box {
+  margin: 0 auto;
+  height: 1.5vw;
+  border-radius: 10vw;
+  text-align: center;
+  font-size: 0.7vw;
+  border-bottom: 3px rgb(129, 135, 227) solid;
+}

@@ -1,9 +1,19 @@
-<%- include("../partials/header") %>
-<form action="/<%= select._id %>?_method=PUT" method="POST">
-  <input type="text"name="name" value="<%= select.name%>">
-  <input type="text"name="description" value="<%= select.description%>">
-  <label>Public</label>
-  <input type="checkbox" name="public" <%= select.public? 'Checked': ''%>>
-  <button type="submit">Update playlist</button>
-</form>
+<%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/playlists.css' />
+
+
+<div class="edit-playlist"> 
+  <h3>Edit Playlist</h3>
+  <form action="/<%= select._id %>?_method=PUT" method="POST">
+    <label>Name</label>
+    <input class="edit-text-box" type="text"name="name" value="<%= select.name%>">
+    <br>
+    <label>Description</label>
+    <input class="edit-text-box" type="text"name="description" value="<%= select.description%>">
+    <br>
+    <label>Public</label>
+    <input type="checkbox" name="public" <%= select.public? 'Checked': ''%>>
+    <button class="add-playlist-btn" type="submit">Update playlist</button>
+  </form>
+</div>
 <%- include("../partials/footer") %>
