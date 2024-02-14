@@ -1,12 +1,19 @@
 # MAaaPlaylist
 
-## About the site
+## About the app
+> The app is a playlist organization tool that allows users to curate personalized playlists. Users must authenticate via Google OAuth to gain access to the app and their created playlists. Without authentication, visitors will be restricted to onlu using the song search feature along with the ability to view public playlists.
 
-> The app will allow users to create a personalized playlist. The app’s user need to be authenticated using Google Oauth to have access to the app and the created playlists. Without any authentication, users of the site will only have access to the song search function.
+## Naming the app
+> The app's name was conceived as a playful pun, incorporating the goat as an inspirational animal and featuring it in the app's logo. The "MAaa" segment of the name represents the characteristic call of a goat, resembling the sound "my" as well. Thus, instead of "my playlist," the "my" is humorously replaced with "MAaa," resulting in the name MAaaplaylist.
 
 ## Development Outline
 
-> The site will be developed using the Express JS framework. A dedicated API will be used to fetch songs and the details of these songs to be added to the user's playlist. The site will be developed and designed using the the conceptualized ERD below. The ERD will have three entities (Playlist, Song, and User) connected with two relationships (Playlist - Song and User - Playlist). 
+> The site will be developed using the Express JS framework. A dedicated API will be used to fetch songs and the details of these songs to be added to the user's playlist. The site will be developed and designed using the the conceptualized ERD below. The ERD will have three entities (Playlist, Song, and User) connected with two relationships (Playlist - Song and User - Playlist).
+
+## link to Trello baord and App
+
+[MAaaplaylist](https://maaaplaylist.fly.dev/) | [Trello](https://trello.com/b/nfH5tSJv/playlist-app)
+
 
 ![Alt text](images/updated-erd.png)
 
@@ -75,7 +82,6 @@ The building of the site will be a team effort. The team was composed of:
 
 - [Mariam](https://github.com/MariamBaloch)
 - [AbdulRahman](https://github.com/aboodabdo347)
-
 * [Nabeel](https://github.com/nabeelmaklai)
 
 The collaboration was organized using a [Trello](https://trello.com/b/nfH5tSJv/playlist-app) board linked
