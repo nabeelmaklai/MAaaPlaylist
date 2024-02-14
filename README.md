@@ -6,14 +6,13 @@
 ## Naming the app
 > The app's name was conceived as a playful pun, incorporating the goat as an inspirational animal and featuring it in the app's logo. The "MAaa" segment of the name represents the characteristic call of a goat, resembling the sound "my" as well. Thus, instead of "my playlist," the "my" is humorously replaced with "MAaa," resulting in the name MAaaplaylist.
 
-## Development Outline
-
-> The site will be developed using the Express JS framework. A dedicated API will be used to fetch songs and the details of these songs to be added to the user's playlist. The site will be developed and designed using the the conceptualized ERD below. The ERD will have three entities (Playlist, Song, and User) connected with two relationships (Playlist - Song and User - Playlist).
-
 ## link to Trello baord and App
 
 [MAaaplaylist](https://maaaplaylist.fly.dev/) | [Trello](https://trello.com/b/nfH5tSJv/playlist-app)
 
+## Development Outline
+
+> The site was developed using the Express JS framework. A dedicated API was used to fetch songs and their details. User are able to add songs to their playlist. The site was developed and designed using the conceptualized ERD below. The ERD has three entities (Playlist, Song, and User) connected with two relationships (Playlist - Song and User - Playlist).
 
 ![Alt text](images/updated-erd.png)
 
