@@ -41,6 +41,7 @@
 <img id="skull"src="images/skull.webp">
 
 <audio controls autoplay loop   style="opacity: 0;"><source src="sounds/neon.mp3" type="audio/mp3"></audio>
+<audio controls id="goat" style="opacity: 0;"><source src="sounds/goat.mp3" type="audio/mp3"></audio>
 
 <script>
   let checkbox = document.querySelector('#advanceSearch')
@@ -53,4 +54,9 @@
     artistSearch.value = ''
   }
 })
+  let goat = document.querySelector('#goat')
+  let logo = document.querySelector('#logo-img').addEventListener('click',()=>{
+    goat.play()
+  })
+  
 </script>
