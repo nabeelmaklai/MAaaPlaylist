@@ -85,6 +85,13 @@ Playlists that users choose to be displayed publically can be viewed by all user
 
 > ![Alt text](app-images/Public-playlists.png)
 
+ #### Edit a playlists
+
+Logged in users can also update their playlist details such as the name and the description
+ 
+> ![Alt text](app-images/edit-playlist.png)
+
+
 ## Coding the App
 
 The app was developed using the ExpressJS framework and MongoDB. Mongoose was used in the ExpressJS framework to interact with the Mongo database. An API was used to fetch the songs and play short previews of the song. To manage the database, a song, playlist, and a user schema were created. This ensured consistency in the creation of objects in the database, allowing for effective querying. Once the user logs in, a user object including their Google avatar, name, and email is created. When a user searches and adds a song to a playlist, a song object is created and pushed to the database. Since an API was used, the API ID of the song is also utilized to ensure no duplicates are stored in the database and to ensure that the same song is not added twice to the same playlist. The playlists are stored as referenced object IDs in the user object, and the playlist object contains the created referenced object IDs of the songs. These objects are then queried and displayed on the embedded JavaScript views in ExpressJS. 
