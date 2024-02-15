@@ -78,7 +78,7 @@ body {
 }
 
 .songs-container {
-  height: 350px;
+  height: 550px;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 0.1rem solid #fff;
@@ -93,7 +93,6 @@ body {
   outline: 3px white solid;
   outline-offset: -4px;
   max-height: 15vh;
-  padding: 1px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -105,8 +104,8 @@ body {
   border-top-right-radius: 8px;
 }
 .song-cover img {
-  width: 92px;
-  height: 97px;
+  width: 100px;
+  height: 100px;
   margin-bottom: -5px;
   border: 0.5px rgb(255, 255, 255) solid;
   border-top-right-radius: 50px;
@@ -183,7 +182,7 @@ body {
 }
 audio {
   background-color: white;
-  width: 40vh;
+  width: 64vh;
   height: 25px;
   border-bottom: 1px white solid;
   margin-bottom: -12px;

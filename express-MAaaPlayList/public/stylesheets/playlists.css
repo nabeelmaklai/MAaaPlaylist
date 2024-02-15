@@ -59,7 +59,8 @@ body {
 
 /* button css from taken from https://uiverse.io/adamgiebl/ugly-robin-41 */
 .add-playlist-btn,
-.listplaylist-btn {
+.listplaylist-btn,
+.update-btn {
   width: max-content;
   margin: 4vh auto;
   --red: #ce0d0d;
@@ -81,10 +82,14 @@ body {
     0 0 9px 3px rgba(221, 31, 14, 0.1);
 }
 .add-playlist-btn:hover,
-.listplaylist-btn:hover {
+.listplaylist-btn:hover,
+.update-btn:hover {
   color: #bf150c;
   box-shadow: inset 0 0 10px rgba(253, 57, 27, 0.6),
     0 0 9px 3px rgba(253, 80, 27, 0.2);
+}
+.update-btn {
+  margin: 5% auto;
 }
 #search-song-form {
   display: flex;
@@ -138,9 +143,9 @@ body {
 }
 
 .edit-text-box {
-  margin: 0 auto;
+  margin: 2% auto;
   width: 70%;
-  height: 1.5vw;
+  min-height: 40px;
   border-radius: 10vw;
   text-align: center;
   font-size: 0.7vw;
